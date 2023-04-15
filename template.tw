@@ -1,5 +1,5 @@
 :: StoryTitle
-Our Biggest Premiere Yet
+Our Place, in Our City
 
 
 :: StoryData
@@ -172,8 +172,8 @@ setup.addCaptions = (cuekey) =>  {
      const track = audio.addTextTrack('subtitles', 'English', 'en');
     track.mode = 'showing';
     const cues = {
-      premiere: [[0.001,7.205,""],[7.23,10.02,"Welcome to the immersive body experience"],[10.045,13.71,"with fire and rage. I'm Veronica"],[13.71,16.32,"sclerotome, artist and producer from"],[16.32,19.02,"Kharkiv, Ukraine, and I will be your"],[19.02,23.01,"guide for today. Along the way, I"],[23.01,25.5,"encourage you to take a break. If you"],[25.5,28.17,"want to stop for a coffee, you will not"],[28.17,30.99,"spend long in each location but even so,"],[31.26,34.529,"find a place to sit to lean to shelter."],[35.04,37.65,"Make yourself comfortable. After all,"],[38.04,41.01,"Liverpool is your city, not mine. The"],[41.01,43.17,"places you will walk in, I've never"],[43.17,45.96,"been, but lets your imagination wander"],[45.96,49.17,"from your streets to ours. As I take you"],[49.17,51.6,"on a journey to the frontline in Ukraine"],[52.2,54.15,"to meet some of our country's most"],[54.15,57.36,"radical, brave and innovative artists"],[57.9,60.63,"from art museums, libraries, train"],[60.63,63.21,"stations and cafes in Liverpool to"],[63.21,65.16,"different histories in places across"],[65.16,68.31,"Ukraine. From where you are now at the"],[68.31,71.03999999999999,"Liverpool Everyman to the lesser Quinta"],[71.03999999999999,74.55,"Theatre in the beef. Here, you will need"],[74.58,77.34,"our first artist, Oliver Pooja kowski,"],[77.91,79.89,"who with tremendous courage and"],[79.89,82.5,"ingenuity, transformed her theatre to"],[82.5,87.27,"respond to a moment of crisis. So, I"],[87.27,89.91,"already let's begin."],[89.935,97.625,""],[97.65,103.53,"10 987 burning house in heaven, a"],[103.53,106.77000000000001,"cartridge is full of deceptions slyness,"],[107.00999999999999,110.19,"blackmail, no exceptions, read"],[110.4,113.64,"reflections, reviewing eternal centers"],[113.64,118.11,"of life, destroy, forget, deprive six"],[118.11,122.315,"five burn down. church choirs believe"],[122.34,125.79,"there is no where to flee for three to"],[125.79,128.58,"the abyss of suffering we have run to"],[128.58,128.94,"one."],[128.965,140.70499999999998,""],[140.73,144.57,"On the 24th of February 2020, till the"],[144.57,147.21,"day of the full scale invasion, we made"],[147.21,150.03,"a plan of how to defend the theater and"],[150.03,153.78,"how we could avoid being captured. It's"],[153.81,156.12,"the highest building in the district."],[156.48,158.52,"And right across the street, there is a"],[158.52,162.18,"big military base. So we put razor wire"],[162.21,164.4,"anywhere a person could climb onto the"],[164.4,167.28,"rooftop, and some of the staff began to"],[167.28,170.19,"make Molotov cocktails. This was the"],[170.19,174.72,"first day the war had already been going"],[174.72,177.78,"in the east for many years. So full"],[177.78,180.93,"scale invasion was not a surprise. But"],[180.93,184.59,"still, in the sharp moment of crisis. We"],[184.59,187.65,"were lost and we didn't know how to"],[187.71,190.92,"adapt our work. At first, it was very"],[190.92,194.88,"good. We had no sleep. Every day we had"],[194.88,198.24,"meetings with the whole theater team. We"],[198.24,200.91,"made a lot of mistakes, but we tried to"],[200.91,203.82,"find the best solutions. We started by"],[203.82,206.88,"setting up the spaces for refugees, and"],[206.88,209.37,"cleaning the basement that became a bomb"],[209.37,212.94,"shelter. We invited not only artists but"],[212.97,215.73,"anyone who had to flee and needed a"],[215.73,218.61,"space to stay. Many of our staff didn't"],[218.61,221.07,"feel safe in their apartments, so they"],[221.07,225.36,"also lived here. In our theater. We set"],[225.36,228.3,"up a shower and created a small kitchen."],[228.96,231.03,"The person who used to be in charge of"],[231.03,233.91,"laundry for costumes now washed clothes"],[233.94,237.09,"and bedding. Instead, the small stage"],[237.09,240,"became a space to store humanitarian aid"],[240.24,244.29,"actors distributed not only in Lviv but"],[244.29,247.11,"to other cities, often under shelling."],[247.71,250.35,"We organized buses for those who were"],[250.35,252.93,"displaced to go through the border to"],[252.93,255.72,"Poland. Because it was an awful"],[255.72,259.74,"situation. Those over 60 and mothers"],[259.74,262.65,"with a lot of small kids were stuck"],[262.65,266.43,"there for days. We prepared warm food"],[266.43,269.67,"and drinks and actors would give this"],[269.67,272.01,"out at the railway stations were"],[272.01,274.29,"internally displaced people were also"],[274.29,277.35,"waiting for days in winter, we equipped"],[277.35,279.87,"soldiers, including our colleagues and"],[279.87,282.45,"friends who went to defend the country."],[282.75,286.65,"Everything we had as theater was used in"],[286.68,289.65,"a new way. Set and probes became"],[289.65,293.07,"humanitarian aid and technical supplies"],[293.07,296.46,"things like walkie talkies were sent to"],[296.46,298.95,"the front line in the costume"],[298.95,302.04,"department. We sold parts of the uniform"],[302.07,305.19,"for soldiers. A very interesting fashion"],[305.19,308.04,"designer who lived in our shelter became"],[308.04,310.86,"the head of this production. For the"],[310.86,313.23,"last five years we have been trying to"],[313.23,316.86,"work without a strict hierarchy. And it"],[316.86,320.88,"is this horizontal structure that led to"],[320.88,323.7,"our biggest premiere yet, where the"],[323.7,327.24,"whole team united on the 24th of"],[327.24,330.18,"February to respond to the full scale"],[330.18,333.24,"invasion. And work is one strong"],[333.265,357.365,""]], 
-       streets: [[0.001,10.444,""],[10.469,13.229,"From the beginning, our citizens just"],[13.259,15.479,"changed and became full of strange and"],[15.479,19.859,"interesting artifacts. As you walk, look"],[19.859,25.169,"around Can you see underground bars to"],[25.169,30.089,"basements of buildings? In our cities,"],[30.329,31.919,"this were quickly adapted to become"],[31.919,35.279,"places to hide from rockets. posters"],[35.279,37.019,"from Music Nights are replaced with"],[37.019,40.469,"science for bumped shelters. As food and"],[40.469,42.779,"water restart for those taking refuge,"],[43.049,45.689,"sometimes for hours, weeks, or even"],[45.689,48.719,"months. On roads such as the one you're"],[48.719,51.089,"watching, people make outposts in"],[51.089,54.059,"preparation for invasion. And artists"],[54.149,56.189,"welded giant metal beams together"],[56.219,58.589,"creating hedge hooks to stop Russian"],[58.589,62.879,"tanks. Famous churches like the one"],[62.879,66.029,"behind and the one in front of you. Were"],[66.029,67.979,"boarded up to stop the stained glass"],[67.979,72.479,"from shattering explosions. Historic"],[72.479,74.57900000000001,"Buildings were protected in unique ways"],[74.729,76.559,"using metal sheets, plywood and"],[76.559,80.489,"scaffolding. Statues similar to the many"],[80.489,82.889,"will pass on your work today. You're"],[82.889,88.589,"covered in sandbags to protect them. The"],[88.589,90.749,"air raid alarm memory from high school"],[90.749,92.699,"drills appears as a present day"],[92.699,95.57900000000001,"nightmare. You're seeing the everyday"],[95.57900000000001,98.09899999999999,"sounds of the streets, it warrants the"],[98.09899999999999,100.34899999999999,"truck it's a camera and you have minutes"],[100.34899999999999,103.469,"to get on the ground. You catch eyes"],[103.469,105.65899999999999,"with strangers in anticipation of what's"],[105.65899999999999,111.364,"to come is an airborne or theory."],[111.38900000000001,113.369,"Millions of people flee the frontline"],[113.369,116.519,"cities. men of all ages are drafted in"],[116.519,119.699,"the military and teachers cancel lessons"],[119.699,120.239,"writing"],[120.264,127.415,""],[127.44,130.02,"there will be no classes today. Stay"],[130.02,133.59,"safe, minus sirens. Go down to the"],[133.59,138.06,"shelter, pack a backpack, bandages and"],[138.09,141.81,"ID in other medications you may need a"],[141.81,145.8,"bottle of water this gets a flashlight"],[146.31,150.75,"and needle with thread money documents a"],[150.75,154.95,"power bank mobile phone write your name"],[154.95,158.1,"surname on your hand. Your blood group,"],[158.55,161.7,"relatives phone number if the explosion"],[161.7,164.94,"is close, run to the bathroom. Keep in"],[164.94,169.8,"touch, breathe deeply. These are go down"],[169.82999999999998,171.21,"in the history books."],[171.235,192.46,""]]
+     place:[[0.013,8.284,"[audio playing...]"],[8.309,10.499,"Why do people internationally only want"],[10.499,14.039,"to see us as victims on this percolating"],[14.069,17.189,"on our tears and blood, romanticizing"],[17.189,20.399,"the violence. It is offensive for those"],[20.399,22.049,"who come from colonial and Imperial"],[22.049,24.779,"countries to realize that we are equals"],[24.839,28.379,"or more beautiful people with a rich"],[28.379,32.129,"cultural heritage. across the ages,"],[32.189,35.069,"Russia stole not only our art objects,"],[35.219,38.669,"but our rights to self determination. We"],[38.669,40.619,"are fighting for the rights to build our"],[40.619,45.119,"own identity. I am a woman with strength"],[45.149,48.389,"with anger and the power to create bring"],[48.389,51.904,"into light our spirits, our own beliefs"],[51.929,53.939,"within humanity and this new"],[53.939,58.199,"circumstances. We are considering what"],[58.199,60.239,"the new function of art is in a"],[60.239,62.909,"narrative without imperialism, and"],[62.909,64.949,"people like activist and artists and"],[64.949,67.529,"ushering in a fighting for all of this,"],[67.679,70.019,"it's a moment when the most important"],[70.019,83.405,"case is also to survive."],[83.43,87.03,"All of us were scared. We didn't expect"],[87.03,93.455,"this. I understand that that was stupid."],[93.47999999999999,96.39,"But still, I didn't believe this would"],[96.39,100.41,"happen. But after one month, we began to"],[100.41,102.45,"have many meetings with our teammates"],[102.45,104.88,"there, the Organization for Women of"],[104.88,107.55,"hockey, including lesbian and bisexual"],[107.55,110.34,"women. We started to talk about how we"],[110.34,112.65,"could support the community raising"],[112.65,116.67,"money for food, clothing medicine. At"],[116.67,118.32,"the same time, we understood that"],[118.32,120.96,"homophobia and misogyny are still"],[120.96,124.02,"present in our society. And we wanted to"],[124.02,126.42,"show what women and the LGBT plus"],[126.42,129.09,"community are doing for our victory,"],[129.57,131.34,"which shows the format of performance"],[131.34,133.8,"interventions in the city. Because large"],[133.8,135.75,"scale public gatherings are banned"],[135.78,139.41,"during wartime. The first intervention"],[139.41,142.07999999999998,"was just me and my girlfriend, were"],[142.07999999999998,144.905,"created this procession with two flags,"],[144.93,147.27,"one for Ukraine and the other, the"],[147.27,151.38,"lesbian flag for hockey bride. We were"],[151.38,154.235,"scared just to walk on the streets."],[154.26,155.85,"There had been a lot of air raid"],[155.85,160.02,"signals, many bombs and rockets. But we"],[160.02,162.935,"tried to say something to ourselves,"],[162.96,165.6,"that we can walk in the city, even if"],[165.6,168.3,"the buildings are destroyed, to show"],[168.3,170.04,"that we are brave, even in these"],[170.04,173.73,"moments, to say that we stayed in our"],[173.73,180.725,"own city, and we are who we are."],[180.75,183,"The next intervention was a performance"],[183,185.465,"with a bit of silence."],[185.49,187.92,"There was a lot of flowers, rainbow"],[187.92,190.14,"flags and candles, remembering all the"],[190.14,192,"Ukrainian heroes who were killed in"],[192,195.21,"Dubai done in 2014. And the Russian was"],[195.21,199.82999999999998,"on Ukraine since aloe vera, one of our"],[199.86,202.53,"volunteers for Hodgkin pride was in our"],[202.53,206.465,"administration building on a rocket hit."],[206.49,208.44,"He had slept there because she was a"],[208.44,213.335,"volunteer in the kitchen. And she died."],[213.36,215.22,"My girlfriend's has no rights to ask"],[215.22,217.56,"about her body, or to help her parents"],[217.56,221.13,"with a funeral. So in this performance,"],[221.49,229.595,"we remembered Olivia two"],[229.62,232.14,"after that, we created a performance"],[232.14,234.66,"with a rainbow car recreating a lesbian"],[234.66,237.3,"wedding, which were covered in many"],[237.3,244.175,"ribbons and words for marriage equality."],[244.2,246.33,"We created a performance about the wives"],[246.33,249.42,"of Russian rapists. We made this protest"],[249.42,253.29,"after Bucha because I realized that if I"],[253.29,255.45,"didn't do anything, it would make me"],[255.45,260.37,"crazy. That I must say something. After"],[260.37,262.5,"Bucha all Ukrainian woman understood"],[262.5,264.69,"that it would be with our bodies with"],[264.69,266.97,"our daughters bodies. We hold this"],[266.97,270.93,"trauma. So we gathered stuff similar to"],[270.93,273.69,"what they steal, clothes, underwear"],[273.72,276.3,"electronics, and we left it near the"],[276.3,278.67,"Russian cancel and Harkey with a poster"],[278.67,281.07,"that said for the wives of Russian"],[281.07,292.71500000000003,"rapists."],[292.74,295.74,"Before the 24th of February, Harkin had"],[295.74,297.99,"a lot of trade with Russia, and people"],[297.99,300.63,"came here to work. Go to the theater"],[300.93,306.81,"cinema. We didn't take Russia. But it is"],[306.81,308.7,"important how many people change their"],[308.7,314.255,"minds are the first I was a pacifist."],[314.28,316.68,"And now I'm really confused with what I"],[316.68,320.1,"can do with my peaceful beliefs and how"],[320.1,323.97,"I can realize my own value. It's"],[323.97,326.16,"important to continue to choose human"],[326.16,329.16,"rights every time. This is why we"],[329.16,332.04,"continue to organize our events, to make"],[332.04,334.47,"sure we have our place in our own city"],[334.68,338.49,"to speak aloud. Because we are fighting"],[338.49,341.58,"not only against the Russian army, we"],[341.58,343.62,"are fighting for our values."],[343.645,362.658,"[audio playing...]"]], 
+       streets3: [[0.071,10.744,"[audio playing...]"],[10.769,13.769,"winter arrives again. And the new year"],[13.769,16.319,"begins with the sound of rockets instead"],[16.319,20.939,"of fireworks. When you walk today, maybe"],[20.939,22.259,"you will pass one of your favorite"],[22.259,25.769,"buildings in Liverpool. What loss would"],[25.769,31.289,"you feel if it was no longer there? To"],[31.289,33.179,"walk through our streets now has become"],[33.179,36.209,"painful, physically painful to see the"],[36.209,39.034,"destruction of theaters, museums,"],[39.059,41.189,"libraries, churches, synagogues,"],[41.219,43.679,"mosques, you can recognize the"],[43.679,45.989,"historical face of a city through its"],[45.989,50.309,"buildings. You can't imagine how much"],[50.309,54.844,"heritage you will not manage to rebuild."],[54.869,56.819,"cherished memories in our favorite"],[56.819,61.619,"places are now scarred as joy from the"],[61.619,77.015,"past becomes distorted in the present."],[77.03999999999999,80.7,"Time stopped and he doesn't move any"],[80.7,85.235,"more. Time was short with air bombs."],[85.26,88.23,"Time was raped, collectively and"],[88.23,92.67,"deliberately. Time lies in the world and"],[92.67,95.49000000000001,"waits for the spring waters to bring its"],[95.49000000000001,98.52000000000001,"body to the surface. For this spring"],[98.52000000000001,101.82,"waters do not come. Because time does"],[101.82,105.09,"not exist anymore. And there is no"],[105.09,108.935,"spring and there is no water to come."],[108.96000000000001,113.16499999999999,"And there is no sun to rise and set."],[113.19,117.15,"There is endless February and we're all"],[117.15,120.75,"in it. Children lose the ability to"],[120.75,125.22,"walk. They forget the words, they cling"],[125.25,127.5,"to the mothers, as if they want to"],[127.5,131.82,"return to the womb. There is no way back"],[132.48,136.2,"and there is no way forward. There is an"],[136.2,139.74,"infinite now. And the damn plane"],[139.8,142.29,"endlessly circles and circles and"],[142.29,145.47,"circles. Even though it was shot down a"],[145.47,150.39,"long time ago. It is still there in the"],[150.39,155.49,"sky above us can use some of the new"],[155.49,172.265,"world."],[172.29,174.48,"As you walk, listen to the different"],[174.48,181.38,"sounds of the city. Maybe you can hear"],[181.38,184.77,"cars, bosses, people talking on the"],[184.77,192.66,"phones and to each other. silence now"],[192.66,194.88,"shapes the landscapes of our towns and"],[194.88,198.57,"cities on the frontline. It is literally"],[198.57,200.91,"something from another dimension. It is"],[200.91,206.57999999999998,"painful and scary for me. Now, when I"],[206.57999999999998,208.89,"walk the streets in hierarchy, I rarely"],[208.89,213.72,"see car so people the shops and"],[213.72,216.845,"buildings, a place of plus decoration,"],[216.87,219.42000000000002,"as emptiness and silence the place"],[219.42000000000002,224.04500000000002,"something that was once full of life."],[224.07,225.81,"Maybe you experienced this during the"],[225.81,229.05,"lockdown, a distant memory for you."],[229.44,233.34,"After everything went back to normal. We"],[233.34,236.22,"are not in normal circumstances. To"],[236.22,238.95,"silent here because many people are gone"],[239.13,242.555,"as our cities, our culture, our country"],[242.58,244.17,"is being erased from the Earth's"],[244.17,248.43,"surface. And I asked activists and"],[248.46,251.91,"artists on the show Regina, what song we"],[251.91,254.97,"could play after hearing her story. She"],[254.97,256.83,"told me she had stopped listening to"],[256.83,260.64,"music. You need to be able to hear the"],[260.64,263.79,"air raid alarm she said So play that"],[264.15,270.317,"silence"],[270.342,360.079,""]]
   }
     for (let i=0; i<cues[cuekey].length; i++){
     const cue = new VTTCue(cues[cuekey][i][0],cues[cuekey][i][1],cues[cuekey][i][2]);
@@ -233,8 +233,7 @@ setup.backThirty = () => {
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
-<<cacheaudio "premiere" "https://remote.co.com/MoTT/AgentTraining/Sounds/13.%20Challenge%203%20-%202.mp3">>
-<<waitforaudio>>
+
 
 
 
@@ -622,7 +621,7 @@ setup.backThirty = () => {
 :: beginning [nobr]  {"position":"700,175","size":"100,100"}
 <<set $prevpass to "beginning">>
 <<set $passage to "beginning">>
-<<set $nextpass to "instructions">>
+<<set $nextpass to "landing">>
 <<set $transcript to false>>
 <<set $playToggle to false>>
 <<set $captionToggle to false>>
@@ -635,7 +634,7 @@ setup.backThirty = () => {
 <main class="" id="">
 
 <div class="poster-wrapper" id="poster">
-   <img class="poster" src="./../assets/img/main.jpeg"/>
+   <img class="poster" src="./../assets/img/place.jpeg"/>
  </div>
  <div class="menu-wrapper">
     <<button "Begin">><<goto $nextpass>><</button>>
@@ -646,72 +645,11 @@ setup.backThirty = () => {
 
 
 
-:: instructions [nobr]
-<<set $prevpass to "beginning">>
-<<set $passage to "instructions">>
-<<set $nextpass to "landing">>
-<<set $showMap to false>>
-<<set $showAudio to false>>
-<<set $showReplay to false>>
-<<set $showForwards to true>>
-<<set $showBackwards to false>>
-<<set $showCaptionsIcon to false>>
-/* <<set $map = setup.generateDirectionsMap({originLat: 53.402939134543324,originLong:-2.969497397902565, originPlaceId: "ChIJ2ccRtxghe0gR3Z7JzoorJ58"},"ChIJ2ccRtxghe0gR3Z7JzoorJ58")>> */
-
-<<set $map = setup.generateViewMap({originLat: 53.402939134543324,originLong:-2.969497397902565, originName: "Liverpool Everyman Theatre"})>>
-
-
-<div id="audio"></div>
-/* <<include "header">> */
-<main class="instructions">
-<h2>Instructions</h2>
-<div id="map" class="hide">$map</div>
-<div id="mount"></div>
-<<timed 2s>>
-  <<replace "#mount">>
-    <p>The <<link [img[assets/img/map.png]]>><<toggleclass "#map" "hide">><</link>> takes you to a map</p>
-  <</replace>>
-
-<</timed>>
-<<timed 5s>>
-  <<append "#mount">>
-<p>The arrow [img[Back|assets/img/back.png][$prevpass]] skips back</p>
-  <</append>>
-<</timed>>
-<<timed 8s>>
-  <<append "#mount">>
-<p>You can replay with this icon   [img[Replay|assets/img/replay.png][$passage]]</p>
-  <</append>>
-    
-<</timed>>
-<<timed 11s>>
-  <<append "#mount">>
-<p>Step forward via a button like this     [img[Forward|assets/img/for.png][$nextpass]]</p>
-  <</append>>
-<</timed>>
- <<timed 13s>>
-  <<append "#mount">>
-<p>Toggle captions by tapping this [img[Forward|assets/img/captions.png][$nextpass]]</p>
-  <</append>>
-<</timed>>
- <<timed 15s>>
-  <<append "#mount">>
-<p>[img[Forward|assets/img/transcript.png][$nextpass]] will show a transcript of the audio</p>
-  <</append>>
-<</timed>>
- <<timed 17s>>
-  <<append "#mount">>
-<<button "Next">><<goto $nextpass>><</button>>
-  <</append>>
-<</timed>>
-</main>
-<<include "footerfor">>
-
 
 :: landing [nobr]
-<<set $title to "Our Biggest Premiere Yet">>
+<<set $title to "Our Place, in Our City">>
 <<set $openOrClosed to "closed">>
-<<set $prevpass to "instructions">>
+<<set $prevpass to "beginning">>
 <<set $passage to "landing">>
 <<set $nextpass to "instnar2">>
 <<set $showMap to true>>
@@ -720,7 +658,7 @@ setup.backThirty = () => {
 <<set $showForwards to true>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to false>>
-<<set $map = setup.generateDirectionsMap(53.4030572538972, -2.969504715141457,53.4030572538972, -2.969504715141457)>>
+<<set $map = setup.generateViewMap({originLat: 53.40907123957618,originLong: -2.984770301961675, originName: "Lovelocks Coffee Shop"})>>
 <div id="audio"></div>
 <<include "header">>
 <div class="comp-warning">Best to experience on a phone</div>
@@ -728,8 +666,11 @@ setup.backThirty = () => {
 
 <div id="map" class="hide">$map</div>
 
-  <p>You should be inside or outside the Liverpool Everyman</p>
- <p>Is the theatre  <div class="inline-btn-wrapper"><<link "open">><<set $openOrClosed to "open">><<goto "instnar2">><</link>> or <div class="inline-btn-wrapper"><<link "closed">><<set $openOrClosed to "closed">><<goto "instnar2">><</link>></div></div>?</p>
+<p>You should be outside Lovelocks Cafe </p>
+<p>A cornerstone of inclusivity in the community</p>
+<p>Our artwork is in the window </p>
+<p>And the Lesbian flag for Kharkiv pride out front</p>
+<p>Is the cafe  <div class="inline-btn-wrapper"><<link "open">><<set $openOrClosed to "open">><<goto "instnar2">><</link>> or <div class="inline-btn-wrapper"><<link "closed">><<set $openOrClosed to "closed">><<goto "instnar2">><</link>></div></div>?</p>
  
 </main>
 <<include "footer">>
@@ -737,7 +678,7 @@ setup.backThirty = () => {
 :: instnar2 [nobr]
 <<set $prevpass to "landing">>
 <<set $passage to "instnar2">>
-<<set $nextpass to "premiere">>
+<<set $nextpass to "place">>
 <<set $showMap to false>>
 <<set $showAudio to false>>
 <<set $showReplay to true>>
@@ -749,17 +690,16 @@ setup.backThirty = () => {
 <main class="instructions">
 <div id="map" class="hide">$map</div>
   <<if $openOrClosed is "open">>
-    <p>Go inside and take a seat in the downstairs bar </p>
-  <p>There are some comfy sofas either end</p>
-  <p>When you’re ready let me know</p>
+  <p>Go inside and sit down</p>
+  <p>You dont need to buy anything</p>
+  <p>But the coffee and cake come highly recommended</p>
   <<button "I'm ready">><<goto $nextpass>><</button>>
 <</if>>
 
 
   <<if $openOrClosed is "closed">>
-  <p>Find a place to take shelter</p>
-  <p>Maybe by the big windows, under the theatre’s balcony</p>
-  <p>When you’re ready let me know</p>
+  <p>Sit on the steps across the road</p>
+  <p>Taking in the buildings and streets around you</p>
     <<button "I'm ready">><<goto $nextpass>><</button>>
 <</if>>
 </main>
@@ -770,9 +710,9 @@ setup.backThirty = () => {
 
 
 
-:: premiere [nobr]  {"position":"700,175","size":"100,100"}
+:: place [nobr]  {"position":"700,175","size":"100,100"}
 <<set $prevpass to "instnar2">>
-<<set $passage to "premiere">>
+<<set $passage to "place">>
 <<set $nextpass to "instnar3">>
 <<set $transcript to false>>
 <<set $playToggle to false>>
@@ -780,15 +720,15 @@ setup.backThirty = () => {
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to true>>
 <<set $showMap to false>>
-<<set $transcriptname to  "premieretranscript">>
+<<set $transcriptname to  "placetranscript">>
 <<include "headerstory">>
 <main class="story" id="storyContainer">
 <audio id="audio" >
-  <source src="https://www.dropbox.com/s/myez5ffs5k6zy26/01.%20Our%20Biggest%20Premiere%20Yet%20V1.mp3?raw=1">
+  <source src="https://www.dropbox.com/s/5qadd3byh4765me/07.%20OUR%20PLACE%20IN%20OUR%20CITY%20V1.mp3?raw=1">
   <track kind="captions" srclang="en" label="English captions" id="captrack" default>
 </audio>
 <div class="poster-wrapper" id="poster">
-   <img class="poster" src="./../assets/img/obpy.jpeg"/>
+   <img class="poster" src="./../assets/img/place.jpeg"/>
  </div>
   
 <div id="caption" class="hide"></div>
@@ -811,100 +751,73 @@ setup.backThirty = () => {
 
 <<include "footerstory">>
 <<done>>
-  <<set $addC to setup.addCaptions("premiere")>>
+  <<set $addC to setup.addCaptions("place")>>
 <</done>>
 
 
 
-:: premieretranscript
+:: placetranscript
 
 <h2>Transcript</h2>
 
 NARRATOR:
+Why do people internationally only want to see us as victims?
+Only speculating on our tears and blood? Romanticizing the violence.
+It is offensive for those who come from colonial and imperial countries, to realize that we are equals or more.
+Beautiful people with a rich cultural heritage.
+Across the ages, Russia stole not only our art objects, but our right to self-determination. 
+We are fighting for the right to build our own identity. 
+I am a woman, with strength, with anger and the power to create.
+Bringing to light our spirit, our own beliefs. 
+Rethinking humanity in these new circumstances. 
+We are considering what the new function of art is, in a narrative without imperialism.
+And people like activist and artist Anna Sharyhina, are fighting for all of this, at a moment, when the most important case is also to survive.  
 
-Welcome to the immersive audio experience With Fire and Rage...
-I’m Veronika Skliarova, artist and producer from Kharkiv, Ukraine. And I will be your guide for today.
-Along the way, I encourage you to take a break... If you want, stop for a coffee. We will not spend long in each location but even so, find a place to sit, to lean, to shelter. Make yourself comfortable, after all Liverpool is your city not mine.
-The places you will walk in, I have never been
-But let your imagination wander from your streets to ours. 
-As I take you on a journey to the frontline in Ukraine, to meet some of our country's most radical, brave and innovative artists.
-From art museums, libraries, train stations, and cafes in Liverpool, to different histories and places across Ukraine.
-From where you are now, at the Liverpool Everyman, to the Lesya Ukrainka Theater in Lviv. Here you will meet our first artist Olha Puzhakovska, who with tremendous courage and ingenuity transformed her theatre to respond to a moment of crisis... 
-So, are you ready?
-Let’s begin
+ANNA SHARYHINA:
+All of us were scared. We didn't expect this. 
+I understand that that was stupid, but still, I didn’t believe this would happen.
+But after one month, we began to have many meetings with our team at Sphere - our organisation for women of Kharkiv, including lesbian and bisexual women. We started to talk about how we could support the community, raising money for food, clothing, medicine.
+At the same time, we understood that homophobia and misogyny are still present in our society, and we wanted to show what women and the LGBT+ community are doing for our victory. 
 
-ALEXANDER LEVITSKY:
-
-Ten. Nine. Eight. Seven.
-Burning house in heaven.
-A cartridge is full of deceptions.
-Slyness. Blackmail. No exceptions.
-                    	     	Red reflections.
-Reviewing eternal senses of life.
-‘Destroy,’ ‘Forget.’ ‘Deprive.’
-                    	     	Six. Five.
-‘Burn down’ church choirs plea.
-There is nowhere to flee.
-                    	     	Four. Three.
-To the abyss of suffering, we have run.
-Two. One.
-The war has begun. 
-
-OLHA PUZHAKOVSKA:
-
-On the 24th of February 2022 (the day of the full-scale invasion), we made a plan of how to defend the theatre and how we could avoid it being captured. 
-It’s the highest building in the district and right across the street, there is a big military base. So we put razor wire anywhere a person could climb onto the rooftop, and some of the staff began to make Molotov cocktails. 
-This was the first day.
-The war had already being going in the east for many years, so the full-scale invasion was not a surprise. But still, in the sharp moment of crisis, we were lost and we didn't know how to adapt our work. 
-At first, it was very chaotic. We had no sleep. Every day we had meetings with the whole theatre team. We made a lot of mistakes, but we tried to find the best solutions.
-We started by setting up the spaces for refugees and cleaning the basement that became a bomb shelter.
-We invited not only artists but anyone who had to flee and needed a space to stay. 
-Many of our staff didn't feel safe in their apartments, so they also lived here in our theatre.
-We set up a shower and created a small kitchen. The person who used to be in charge of the laundry for costumes now washed clothes and bedding instead.
-The small stage became a space to store humanitarian aid. Actors distributed it not only in Lviv but to other cities, often under shelling.
-We organised buses for those who were displaced to go through the border to Poland. Because it was an awful situation, those over 60 and mothers with a lot of small kids were stuck there for days.
-We prepared warm food and drinks, and actors would give this out at the railway stations, where internally displaced people were also waiting for days in winter.
-We equipped soldiers, including our colleagues and friends, who went to go and defend the country. 
-Everything we had as a theatre was used in a new way. Set and costume became humanitarian aid, and technical supplies things like walkie-talkies were sent to the front line.
-In the costume department, we sewed parts of the uniforms for soldiers. A very interesting fashion designer who lived in our shelter became the head of this production.
-For the last five years, we have been trying to work without a strict hierarchy. And it is this horizontal structure that led to our biggest premiere yet - where the whole team united on the 24th of February to respond to the full-scale invasion and work as one strong mechanism.
-
+We chose the format of performance interventions in the city because large-scale public gatherings are banned during wartime.
+The first intervention, was just me and my girlfriend. We created this procession with two flags - one for Ukraine and the other the Lesbian flag for Kharkiv pride.
+We were scared just to walk on the streets. There had been a lot of air raid signals, many bombs and rockets. But we tried to say something to ourselves. 
+That we can walk in the city, even if the buildings are destroyed. To show that we are brave even in these moments. To say that we stayed in our own city and we are, who we are. 
+The next intervention was a performance for the minute of silence. There was a lot of flowers, rainbow flags and candles, remembering all the Ukrainian heroes who were killed in the Maidan in 2014 and the Russian wars on Ukraine since. 
+Elvira, one of our volunteers for Kharkiv Pride was in our administration building when a rocket hit. She had slept there because she was a volunteer in the kitchen and she died. Her girlfriend has no rights to ask about her body or to help her parents with the funeral. So in this performance, we remembered Elvira too. 
+After that, we created a performance with a rainbow car recreating a Lesbian Wedding, which we covered in many ribbons and words for marriage equality.
+We created a performance about the wives of Russian rapists.
+We made this protest after Bucha.
+Because I realised that if I didn't do anything, it would make me crazy. That I must say something. After Bucha all Ukrainian woman understood that it would be with our bodies, with our daughter’s bodies. We hold this trauma.
+So we gathered stuff similar to what they stole - clothes, underwear, electronics and we left it near the Russian consul in Kharkiv, with a poster, that said for the wives of Russian rapists. 
+Before the 24th February, Kharkiv had a lot of trade with Russia and people came here to work, go to the theatre… cinema. We didn't hate Russia. But it is important, how many people changed their minds with the first bomb.
+I was a pacifist. Now I am really confused with what I can do with my peaceful beliefs. And how I can realise my own values.
+It's important to continue to choose human rights every time. 
+This is why we continue to organise our events. To make sure we have our place in our own city, to speak aloud.
+Because we are fighting not only against the Russian army but we are fighting for our values.
 
 
 :: instnar3 [nobr]
-<<set $prevpass to "premiere">>
+<<set $prevpass to "place">>
 <<set $passage to "instnar3">>
-<<if $openOrClosed is "open">>
-  <<set $nextpass to "AR1">>
-<</if>>
-<<if $openOrClosed is "closed">>
-  <<set $nextpass to "AR2">>
-<</if>>
+<<set $nextpass to "AR1">>
 <<set $showMap to true>>
 <<set $showAudio to false>>
 <<set $showReplay to true>>
 <<set $showBackwards to true>>
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to false>>
-<<set $map = setup.generateDirectionsMap(53.4030572538972, -2.969504715141457,53.4030572538972, -2.969504715141457)>>
+<<set $map = setup.generateViewMap({originLat: 53.40907123957618,originLong: -2.984770301961675, originName: "Lovelocks Coffee Shop"})>>
 <div id="audio"></div>
 
 <main class="instructions">
 <div id="map" class="hide">$map</div>
-<<if $openOrClosed is "open">>
-  <p> Let me show you some photos </p>
-  <p>Stand in front of the elevator, facing the bar</p>
-  <p>Hold up your phone</p>
-    <<button "Show me">><<goto $nextpass>><</button>>
-<</if>>
 
-<<if $openOrClosed is "closed">>
 <p>Let me show you some photos </p>
-<p>Cross the road and face the Liverpool Everyman</p>
-<p>Hold up your phone and press</p>
-
-  <<button "Show Me">><<goto $nextpass>><</button>>
-<</if>>
+<p>Stand on the pavement on the same side as Lovelocks cafe</p>
+<p>Look for the giant grey building </p>
+<p>Hold up your phone</p>
+<<button "Show me">><<goto $nextpass>><</button>>
 
 
 </main>
@@ -930,7 +843,7 @@ For the last five years, we have been trying to work without a strict hierarchy.
         <img src="./assets/img/gifs/ar1open.gif" class="">
       </div>
     <div class="ar-img-wrapper touch bottom" id="initial" >
-      <img src="./assets/img/everyman-inside.jpeg" class="">
+      <img src="./assets/img/lovelocks.jpeg" class="">
       </div>
   </div>
 
@@ -963,52 +876,25 @@ For the last five years, we have been trying to work without a strict hierarchy.
 <<include "footer">> */
 
 
-:: AR2 [nobr]{"position":"450,50","size":"100,100"}
-<<set $prevpass to "instnar3">>
-<<set $passage to "AR2">>
-<<set $nextpass to "instnar5">>
-<<set $showMap to false>>
-<<set $showAudio to false>>
-<<set $showReplay to true>>
-<<set $showBackwards to true>>
-<<set $showForwards to true>>
-<<set $showCaptionsIcon to false>>
-/* CLOSED  */
-/* <<include "header">> */
-<main class="ar">
-
- <div class="ar-imgs-container one" id="ARContainer">
-    <div class="hidden-img-wrapper touch transparent" id="reveal" >
-        <img src="./assets/img/gifs/ar2closed.gif" class="">
-      </div>
-    <div class="ar-img-wrapper touch bottom" id="initial" >
-      <img src="./assets/img/everyman-outside.jpeg" class="">
-      </div>
-  </div>
-</main>
-<<include "footerAR">>
-<<done>><<set $s to setup.startup()>><</done>>
 
 
 :: instnar5 [nobr]
 <<set $prevpass to "instnar3">>
 <<set $passage to "instnar5">>
-<<set $nextpass to "streets">>
+<<set $nextpass to "streets3">>
 <<set $showMap to true>>
 <<set $showAudio to false>>
 <<set $showReplay to true>>
 <<set $showBackwards to true>>
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to false>>
-<<set $map = setup.generateDirectionsMap(53.40122672594675, -2.969617415416523,53.40188587934155, -2.97516167308871)>>
+<<set $map =  setup.generateDirectionsMap({originLat: 53.40907123957618,originLong: -2.984770301961675, originName: "Lovelocks Coffee Shop"},"Moorfields Station")>>
 <div id="audio"></div>
 
 <main class="instructions">
 <div id="map" class="hide">$map</div>
-<p>Ready to go to the Liverpool Philharmonic?</p>
-<p>It’s a couple of minutes straight down the road</p>
-
-
+<p>Ready to go to the Moorfields Train Station?</p>
+<p>You are looking for the entrance on Old Hall Street</p>
 
   <<button "Let's go">><<goto $nextpass>><</button>>
 </main>
@@ -1017,9 +903,9 @@ For the last five years, we have been trying to work without a strict hierarchy.
 
 
 
-:: streets[nobr]
+:: streets3[nobr]
 <<set $prevpass to "instnar5">>
-<<set $passage to "streets">>
+<<set $passage to "streets3">>
 <<set $nextpass to "end">>
 <<set $showMap to true>>
 <<set $transcript to false>>
@@ -1028,13 +914,13 @@ For the last five years, we have been trying to work without a strict hierarchy.
 <<set $showBackwards to true>>
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to true>>
-<<set $transcriptname to  "streetstranscript">>
+<<set $transcriptname to  "streets3transcript">>
 /* Everyman to 1931  */
-<<set $map = setup.generateDirectionsMap({originName: "Liverpool Everyman", originLat: 53.40294244809804, originLong:-2.9694980926454186}, "Liverpool Philharmonic")>>
+<<set $map =  setup.generateDirectionsMap({originLat: 53.40907123957618,originLong: -2.984770301961675, originName: "Lovelocks Coffee Shop"},"Moorfields Station")>>
 <<include "headerstory">>
 <main class="story" id="storyContainer" >
 <audio id="audio" >
-  <source src="https://www.dropbox.com/s/y21jy250efbj22e/01.%20THE%20STREETS%20PART%20ONE%20V1.mp3?raw=1">
+  <source src="https://www.dropbox.com/s/5em2nsmn6qykjci/07.%20THE%20STREETS%20PART%20Three%20V1.mp3?raw=1">
   <track kind="captions" srclang="en" label="English captions" id="captrack" default>
 </audio>
 
@@ -1073,43 +959,52 @@ For the last five years, we have been trying to work without a strict hierarchy.
 
 <<include "footerstorywalk">>
 <<done>>
-  <<set $addC to setup.addCaptions("streets")>>
+  <<set $addC to setup.addCaptions("streets3")>>
 <</done>>
 
-
-
-:: streetstranscript
+:: streets3transcript
 
 <h2>Transcript</h2>
 
 NARRATOR:
+Winter arrives again, and the new year begins with the sound of rockets instead of fireworks.
+On your walk today, maybe you will pass one of your favourite buildings in Liverpool? 
+What loss would you feel if it was no longer there?
+To walk through our streets now has become painful, physically painful to see the destruction of theatres, museums, libraries, churches, synagogues, and a mosque.
+You can recognise the historical face of a city through its buildings.
+You can't imagine, how much heritage we will not manage to rebuild.
+Cherished memories in our favourite places are now scarred 
+As joy from the past becomes distorted in the present...
 
-From the beginning, our cities and streets changed and became full of strange and interesting artefacts.
-As you walk, look around.... Can you see underground bars or basements of buildings? 
-In our cities, these were quickly adapted to become places to hide from rockets. Posters for music nights were replaced with signs for bomb shelters. As food and water were stored for those taking refuge, sometimes for hours, weeks or even months.
-On roads such as the one you are walking, people made outposts in preparation for invasion. And artists welded giant metal beams together, creating “hedgehogs”, to stop Russian tanks.
-Famous churches like the one behind, and the one in front of you, were boarded up, to stop the stain glass from shattering in explosions. 
-Historic buildings were protected in unique ways, using metal sheets, plywood and scaffolding.
-And statues similar to the many you will pass on your walk today, were covered in sandbags to protect them. 
-The air raid alarm, a memory from high school drills, appeared as a present-day nightmare. 
-Piercing the everyday sounds of the streets, it warns that rockets are coming, and you have minutes to get underground. You catch eyes with strangers in anticipation of what’s to come. Is it an air bomb or artillery?
-Millions of people flee the frontline cities. Men of all ages are drafted into the military, and teachers cancel lessons writing...
+NINA ZAKHOZHENKO:
+Time stopped. 
+And it doesn’t move anymore. Time was shot with air bombs. Time was raped. Collectively and deliberately. Time lies in the well and waits for the spring waters to bring its body to the surface. 
+But the spring waters do not come. 
+Because time does not exist anymore. 
+And there is no spring. 
+And there is no water to come. 
+And there is no sun to rise and set. 
+There is endless February. And we are all in it. 
+Children lose the ability to walk. They forget the words. They cling to their mothers as if they want to return to the womb. 
+But there is no way back. And there is no way forward. 
+There is an infinite now. And the damn plane endlessly circles, and circles, and circles, even though it was shot down a long time ago. But it is still there, in the sky above us. 
+The new sun of the new world.
 
-TEACHER: 
-
-There will be no classes today. 
-Stay safe. Mind the sirens. Go down to the shelter. Pack a backpack. Bandages and iodine. Other medications you may need. A bottle of water. Biscuits. A flashlight. A needle with thread. Money. Documents. A power bank. A mobile phone.
-Write your name/surname on your hand. Your blood group. Relatives’ phone number. If the explosion is close, run to the bathroom.
-Keep in touch. Breathe deeply.
-This will go down in the history books.
-
-
-
+NARRATOR:
+As you walk, listen to the different sounds of the city...
+Maybe you can hear cars, buses, people talking on their phones and to each other….
+Silence now shapes the landscapes of our towns and cities on the frontline.
+It is literally something from another dimension. It is painful and scary for me.
+Now, when I walk the streets in Kharkiv, I rarely see cars or people.
+The shops and buildings a place of plastic decoration, as emptiness and silence replace something that was once full of life.
+Maybe you experienced this during the lockdown? A distant memory for you, after everything went back to normal. 
+We are not in normal circumstances. It is silent here, because many people are gone, as our cities, our culture, our country, is being erased from the earth’s surface.
+When I asked activist and artist Anna Sharyhina, what song we could play after hearing her story, she told me she had stopped listening to music. “You need to be able to hear the air raid alarm.” She said, “So play that, or silence”...
 
 
 
 :: end [nobr]
-<<set $prevpass to "streets">>
+<<set $prevpass to "streets3">>
 <<set $passage to "end">>
 <<set $nextpass to "end">>
 <<set $showMap to false>>
@@ -1119,15 +1014,15 @@ This will go down in the history books.
 <<set $showForwards to false>>
 <<set $showCaptionsIcon to false>>
 /* Church  */
-<<set $map = setup.generateDirectionsMap(53.40143323565547, -2.9706816152244295, 53.40143323565547, -2.9706816152244295)>>
+<<set $map =  setup.generateDirectionsMap({originLat: 53.40907123957618,originLong: -2.984770301961675, originName: "Lovelocks Coffee Shop"},"Moorfields Station")>>
 <main class="end">
 <div id="audio"></div>
 <div id="map" class="hide">$map</div>
 <div id="mount"></div>
-<h2>Liverpool Philharmonic</h2>
+<h2>Moorfields Metro Station</h2>
 <p>Would you like to go on another journey?</p>
 <br/>
- <h3>Spirits from Concrete & Iron</h3>
+ <h3>Concert Between Explosions</h3>
  <br/>
     <a href="https://fr-spirits-concrete-iron.netlify.app/">
 <button>Start</button></a>
