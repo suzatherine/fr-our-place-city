@@ -233,8 +233,17 @@ setup.backThirty = () => {
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
-
-
+<<cacheaudio "43" "./../assets/audio/43.mp3">>
+<<cacheaudio "44" "./../assets/audio/44.mp3">>
+<<cacheaudio "45" "./../assets/audio/45.mp3">>
+<<cacheaudio "46" "./../assets/audio/46.mp3">>
+<<cacheaudio "47.5" "./../assets/audio/47.5.mp3">>
+<<cacheaudio "47" "./../assets/audio/47.mp3">>
+<<cacheaudio "48" "./../assets/audio/48.mp3">>
+<<cacheaudio "49" "./../assets/audio/49.mp3">>
+<<cacheaudio "50.5" "./../assets/audio/50.5.mp3">>
+<<cacheaudio "50" "./../assets/audio/50.mp3">>
+<<waitforaudio>>
 
 
 :: header [nobr]{"position":"100,225","size":"100,100"}
@@ -387,7 +396,7 @@ setup.backThirty = () => {
  
   <div class="nav-wrapper">
     <div class="nav-item">
-    <div id="mount"> <span class="comment">Press the image <br> to see it transform</span></div>
+    <div id="mount"> <span class="comment">Press the photo <br> to see it transform</span></div>
     </div></div>
     <div class="nav-wrapper">
     <div class="nav-item">
@@ -659,6 +668,7 @@ setup.backThirty = () => {
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to false>>
 <<set $map = setup.generateViewMap({originLat: 53.40907123957618,originLong: -2.984770301961675, originName: "Lovelocks Coffee Shop"})>>
+<<audio ":all" stop>><<audio "43" play>>
 <div id="audio"></div>
 <<include "header">>
 <div class="comp-warning">Best to experience on a phone</div>
@@ -690,6 +700,7 @@ setup.backThirty = () => {
 <main class="instructions">
 <div id="map" class="hide">$map</div>
   <<if $openOrClosed is "open">>
+  <<audio ":all" stop>><<audio "44" play>>
   <p>Go inside and sit down</p>
   <p>You dont need to buy anything</p>
   <p>But the coffee and cake come highly recommended</p>
@@ -698,6 +709,7 @@ setup.backThirty = () => {
 
 
   <<if $openOrClosed is "closed">>
+  <<audio ":all" stop>><<audio "46" play>>
   <p>Sit on the steps across the road</p>
   <p>Taking in the buildings and streets around you</p>
     <<button "I'm ready">><<goto $nextpass>><</button>>
@@ -721,6 +733,7 @@ setup.backThirty = () => {
 <<set $showCaptionsIcon to true>>
 <<set $showMap to false>>
 <<set $transcriptname to  "placetranscript">>
+<<audio ":all" stop>><<audio "45" play>>
 <<include "headerstory">>
 <main class="story" id="storyContainer">
 <audio id="audio" >
@@ -808,6 +821,7 @@ Because we are fighting not only against the Russian army but we are fighting fo
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to false>>
 <<set $map = setup.generateViewMap({originLat: 53.40907123957618,originLong: -2.984770301961675, originName: "Lovelocks Coffee Shop"})>>
+<<audio ":all" stop>><<audio "48" play>>
 <div id="audio"></div>
 
 <main class="instructions">
@@ -815,7 +829,7 @@ Because we are fighting not only against the Russian army but we are fighting fo
 
 <p>Let me show you some photos </p>
 <p>Stand on the pavement on the same side as Lovelocks cafe</p>
-<p>Look for the giant grey building </p>
+<p>Face the direction of the giant grey building </p>
 <p>Hold up your phone</p>
 <<button "Show me">><<goto $nextpass>><</button>>
 
@@ -834,6 +848,7 @@ Because we are fighting not only against the Russian army but we are fighting fo
 <<set $showBackwards to true>>
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to false>>
+<<audio ":all" stop>><<audio "47.5" play>>
 /* <<include "header">> */
 /* OPEN */
 <main class="ar">
@@ -889,6 +904,7 @@ Because we are fighting not only against the Russian army but we are fighting fo
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to false>>
 <<set $map =  setup.generateDirectionsMap({originLat: 53.40907123957618,originLong: -2.984770301961675, originName: "Lovelocks Coffee Shop"},"Moorfields Station")>>
+<<audio ":all" stop>><<audio "50" play>>
 <div id="audio"></div>
 
 <main class="instructions">
@@ -916,6 +932,7 @@ Because we are fighting not only against the Russian army but we are fighting fo
 <<set $showCaptionsIcon to true>>
 <<set $transcriptname to  "streets3transcript">>
 /* Everyman to 1931  */
+<<audio ":all" stop>><<audio "50.5" play>>
 <<set $map =  setup.generateDirectionsMap({originLat: 53.40907123957618,originLong: -2.984770301961675, originName: "Lovelocks Coffee Shop"},"Moorfields Station")>>
 <<include "headerstory">>
 <main class="story" id="storyContainer" >
@@ -934,7 +951,7 @@ Because we are fighting not only against the Russian army but we are fighting fo
 
 <<timed 1s>>
   <<replace "#mount">>  
-<p class="comment">You can use the map <<link [img[assets/img/map.png]]>><</link>> to help you get there</p>
+<p class="comment">The map <<link [img[assets/img/map.png]]>><</link>> will help guide you</p>
 <</replace>>
  <</timed>>
 
@@ -1024,7 +1041,7 @@ When I asked activist and artist Anna Sharyhina, what song we could play after h
 <br/>
  <h3>Concert Between Explosions</h3>
  <br/>
-    <a href="https://fr-spirits-concrete-iron.netlify.app/">
+    <a href="https://fr-concerts-between-explosions.netlify.app/">
 <button>Start</button></a>
 
 
