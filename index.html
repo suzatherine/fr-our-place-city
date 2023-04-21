@@ -164,11 +164,18 @@ return iFrame
 
 // TOUCHEVENTS 
 // taken from https://developer.mozilla.org/en-US/docs/Web/API/Touch_events  
-setup.startup = () =>  {
+setup.startup = (playOnTouch) =>  {
   const ongoingTouches = [];
 
 const handleStart = (evt) =>{
   evt.preventDefault();
+    if (playOnTouch === true){
+const audio = document.getElementById("audio");
+const playpause = document.getElementById("playpause");
+ audio.play();
+ playpause.classList.add("playhighlight");
+
+}
  const initial = document.getElementById("initial");
 const reveal = document.getElementById("reveal");
      initial.classList.add("transparent");  
@@ -246,31 +253,6 @@ function log(msg) {
 
 // document.addEventListener("DOMContentLoaded", startup);
 
-// CAPTIONS
-setup.addCaptions = (cuekey) =>  {
-    const audio = document.getElementById("audio");
-     const track = audio.addTextTrack('subtitles', 'English', 'en');
-    track.mode = 'showing';
-    const cues = {
-     place:[[0.013,8.284,"[audio playing...]"],[8.309,10.499,"Why do people internationally only want"],[10.499,14.039,"to see us as victims on this percolating"],[14.069,17.189,"on our tears and blood, romanticizing"],[17.189,20.399,"the violence. It is offensive for those"],[20.399,22.049,"who come from colonial and Imperial"],[22.049,24.779,"countries to realize that we are equals"],[24.839,28.379,"or more beautiful people with a rich"],[28.379,32.129,"cultural heritage. across the ages,"],[32.189,35.069,"Russia stole not only our art objects,"],[35.219,38.669,"but our rights to self determination. We"],[38.669,40.619,"are fighting for the rights to build our"],[40.619,45.119,"own identity. I am a woman with strength"],[45.149,48.389,"with anger and the power to create bring"],[48.389,51.904,"into light our spirits, our own beliefs"],[51.929,53.939,"within humanity and this new"],[53.939,58.199,"circumstances. We are considering what"],[58.199,60.239,"the new function of art is in a"],[60.239,62.909,"narrative without imperialism, and"],[62.909,64.949,"people like activist and artists and"],[64.949,67.529,"ushering in a fighting for all of this,"],[67.679,70.019,"it's a moment when the most important"],[70.019,83.405,"case is also to survive."],[83.43,87.03,"All of us were scared. We didn't expect"],[87.03,93.455,"this. I understand that that was stupid."],[93.47999999999999,96.39,"But still, I didn't believe this would"],[96.39,100.41,"happen. But after one month, we began to"],[100.41,102.45,"have many meetings with our teammates"],[102.45,104.88,"there, the Organization for Women of"],[104.88,107.55,"hockey, including lesbian and bisexual"],[107.55,110.34,"women. We started to talk about how we"],[110.34,112.65,"could support the community raising"],[112.65,116.67,"money for food, clothing medicine. At"],[116.67,118.32,"the same time, we understood that"],[118.32,120.96,"homophobia and misogyny are still"],[120.96,124.02,"present in our society. And we wanted to"],[124.02,126.42,"show what women and the LGBT plus"],[126.42,129.09,"community are doing for our victory,"],[129.57,131.34,"which shows the format of performance"],[131.34,133.8,"interventions in the city. Because large"],[133.8,135.75,"scale public gatherings are banned"],[135.78,139.41,"during wartime. The first intervention"],[139.41,142.07999999999998,"was just me and my girlfriend, were"],[142.07999999999998,144.905,"created this procession with two flags,"],[144.93,147.27,"one for Ukraine and the other, the"],[147.27,151.38,"lesbian flag for hockey bride. We were"],[151.38,154.235,"scared just to walk on the streets."],[154.26,155.85,"There had been a lot of air raid"],[155.85,160.02,"signals, many bombs and rockets. But we"],[160.02,162.935,"tried to say something to ourselves,"],[162.96,165.6,"that we can walk in the city, even if"],[165.6,168.3,"the buildings are destroyed, to show"],[168.3,170.04,"that we are brave, even in these"],[170.04,173.73,"moments, to say that we stayed in our"],[173.73,180.725,"own city, and we are who we are."],[180.75,183,"The next intervention was a performance"],[183,185.465,"with a bit of silence."],[185.49,187.92,"There was a lot of flowers, rainbow"],[187.92,190.14,"flags and candles, remembering all the"],[190.14,192,"Ukrainian heroes who were killed in"],[192,195.21,"Dubai done in 2014. And the Russian was"],[195.21,199.82999999999998,"on Ukraine since aloe vera, one of our"],[199.86,202.53,"volunteers for Hodgkin pride was in our"],[202.53,206.465,"administration building on a rocket hit."],[206.49,208.44,"He had slept there because she was a"],[208.44,213.335,"volunteer in the kitchen. And she died."],[213.36,215.22,"My girlfriend's has no rights to ask"],[215.22,217.56,"about her body, or to help her parents"],[217.56,221.13,"with a funeral. So in this performance,"],[221.49,229.595,"we remembered Olivia two"],[229.62,232.14,"after that, we created a performance"],[232.14,234.66,"with a rainbow car recreating a lesbian"],[234.66,237.3,"wedding, which were covered in many"],[237.3,244.175,"ribbons and words for marriage equality."],[244.2,246.33,"We created a performance about the wives"],[246.33,249.42,"of Russian rapists. We made this protest"],[249.42,253.29,"after Bucha because I realized that if I"],[253.29,255.45,"didn't do anything, it would make me"],[255.45,260.37,"crazy. That I must say something. After"],[260.37,262.5,"Bucha all Ukrainian woman understood"],[262.5,264.69,"that it would be with our bodies with"],[264.69,266.97,"our daughters bodies. We hold this"],[266.97,270.93,"trauma. So we gathered stuff similar to"],[270.93,273.69,"what they steal, clothes, underwear"],[273.72,276.3,"electronics, and we left it near the"],[276.3,278.67,"Russian cancel and Harkey with a poster"],[278.67,281.07,"that said for the wives of Russian"],[281.07,292.71500000000003,"rapists."],[292.74,295.74,"Before the 24th of February, Harkin had"],[295.74,297.99,"a lot of trade with Russia, and people"],[297.99,300.63,"came here to work. Go to the theater"],[300.93,306.81,"cinema. We didn't take Russia. But it is"],[306.81,308.7,"important how many people change their"],[308.7,314.255,"minds are the first I was a pacifist."],[314.28,316.68,"And now I'm really confused with what I"],[316.68,320.1,"can do with my peaceful beliefs and how"],[320.1,323.97,"I can realize my own value. It's"],[323.97,326.16,"important to continue to choose human"],[326.16,329.16,"rights every time. This is why we"],[329.16,332.04,"continue to organize our events, to make"],[332.04,334.47,"sure we have our place in our own city"],[334.68,338.49,"to speak aloud. Because we are fighting"],[338.49,341.58,"not only against the Russian army, we"],[341.58,343.62,"are fighting for our values."],[343.645,362.658,"[audio playing...]"]], 
-       streets3: [[0.071,10.744,"[audio playing...]"],[10.769,13.769,"winter arrives again. And the new year"],[13.769,16.319,"begins with the sound of rockets instead"],[16.319,20.939,"of fireworks. When you walk today, maybe"],[20.939,22.259,"you will pass one of your favorite"],[22.259,25.769,"buildings in Liverpool. What loss would"],[25.769,31.289,"you feel if it was no longer there? To"],[31.289,33.179,"walk through our streets now has become"],[33.179,36.209,"painful, physically painful to see the"],[36.209,39.034,"destruction of theaters, museums,"],[39.059,41.189,"libraries, churches, synagogues,"],[41.219,43.679,"mosques, you can recognize the"],[43.679,45.989,"historical face of a city through its"],[45.989,50.309,"buildings. You can't imagine how much"],[50.309,54.844,"heritage you will not manage to rebuild."],[54.869,56.819,"cherished memories in our favorite"],[56.819,61.619,"places are now scarred as joy from the"],[61.619,77.015,"past becomes distorted in the present."],[77.03999999999999,80.7,"Time stopped and he doesn't move any"],[80.7,85.235,"more. Time was short with air bombs."],[85.26,88.23,"Time was raped, collectively and"],[88.23,92.67,"deliberately. Time lies in the world and"],[92.67,95.49000000000001,"waits for the spring waters to bring its"],[95.49000000000001,98.52000000000001,"body to the surface. For this spring"],[98.52000000000001,101.82,"waters do not come. Because time does"],[101.82,105.09,"not exist anymore. And there is no"],[105.09,108.935,"spring and there is no water to come."],[108.96000000000001,113.16499999999999,"And there is no sun to rise and set."],[113.19,117.15,"There is endless February and we're all"],[117.15,120.75,"in it. Children lose the ability to"],[120.75,125.22,"walk. They forget the words, they cling"],[125.25,127.5,"to the mothers, as if they want to"],[127.5,131.82,"return to the womb. There is no way back"],[132.48,136.2,"and there is no way forward. There is an"],[136.2,139.74,"infinite now. And the damn plane"],[139.8,142.29,"endlessly circles and circles and"],[142.29,145.47,"circles. Even though it was shot down a"],[145.47,150.39,"long time ago. It is still there in the"],[150.39,155.49,"sky above us can use some of the new"],[155.49,172.265,"world."],[172.29,174.48,"As you walk, listen to the different"],[174.48,181.38,"sounds of the city. Maybe you can hear"],[181.38,184.77,"cars, bosses, people talking on the"],[184.77,192.66,"phones and to each other. silence now"],[192.66,194.88,"shapes the landscapes of our towns and"],[194.88,198.57,"cities on the frontline. It is literally"],[198.57,200.91,"something from another dimension. It is"],[200.91,206.57999999999998,"painful and scary for me. Now, when I"],[206.57999999999998,208.89,"walk the streets in hierarchy, I rarely"],[208.89,213.72,"see car so people the shops and"],[213.72,216.845,"buildings, a place of plus decoration,"],[216.87,219.42000000000002,"as emptiness and silence the place"],[219.42000000000002,224.04500000000002,"something that was once full of life."],[224.07,225.81,"Maybe you experienced this during the"],[225.81,229.05,"lockdown, a distant memory for you."],[229.44,233.34,"After everything went back to normal. We"],[233.34,236.22,"are not in normal circumstances. To"],[236.22,238.95,"silent here because many people are gone"],[239.13,242.555,"as our cities, our culture, our country"],[242.58,244.17,"is being erased from the Earth's"],[244.17,248.43,"surface. And I asked activists and"],[248.46,251.91,"artists on the show Regina, what song we"],[251.91,254.97,"could play after hearing her story. She"],[254.97,256.83,"told me she had stopped listening to"],[256.83,260.64,"music. You need to be able to hear the"],[260.64,263.79,"air raid alarm she said So play that"],[264.15,270.317,"silence"],[270.342,360.079,""]]
-  }
-    for (let i=0; i<cues[cuekey].length; i++){
-    const cue = new VTTCue(cues[cuekey][i][0],cues[cuekey][i][1],cues[cuekey][i][2]);
-    track.addCue(cue); 
-}
-    track.addEventListener('cuechange', () => {
-    const activeCue = track.activeCues[0];
-    if (activeCue) {
-      document.getElementById('caption').textContent = activeCue.text;
-    }
-  });
-  console.log(audio.track)
-
-
-
- 
-}
 
 setup.play = () => {
  const audio = document.getElementById("audio")
@@ -308,23 +290,75 @@ setup.backThirty = () => {
   const audio = document.getElementById("audio");
   const timeHolder = audio.currentTime;
   audio.currentTime = timeHolder -30;
-  }</script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100">&lt;&lt;cacheaudio &quot;43&quot; &quot;./../assets/audio/43.mp3&quot;&gt;&gt;
+  }</script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100">&lt;&lt;cacheaudio &quot;43&quot; &quot;./../assets/audio/43v2.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;44&quot; &quot;./../assets/audio/44.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;45&quot; &quot;./../assets/audio/45.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;45&quot; &quot;./../assets/audio/45V2.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;46&quot; &quot;./../assets/audio/46.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;47.5&quot; &quot;./../assets/audio/47.5.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;47&quot; &quot;./../assets/audio/47.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;48&quot; &quot;./../assets/audio/48.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;49&quot; &quot;./../assets/audio/49.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;50.5&quot; &quot;./../assets/audio/50.5.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;50.5&quot; &quot;./../assets/audio/50.5v2.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;50&quot; &quot;./../assets/audio/50.mp3&quot;&gt;&gt;
-&lt;&lt;waitforaudio&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="header" tags="nobr" position="100,225" size="100,100">&lt;header&gt;
+&lt;&lt;waitforaudio&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="header" tags="nobr" position="100,225" size="100,100">&lt;header class=&quot;standard&quot;&gt;
 &lt;div class=&quot;header-item&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;header-item&quot;&gt;
   &lt;h1&gt;$title&lt;/h1&gt;
-  &lt;h3 class=&quot;subtitle&quot;&gt;With Fire &amp; Rage&lt;/h3&gt;
+  &lt;h3 class=&quot;subtitle&quot;&gt;$location&lt;/h3&gt;
+
+&lt;div class=&quot;multiple-icon-wrapper&quot;&gt;
+&lt;&lt;if $bathroom is true&gt;&gt;
+ &lt;div class=&quot;multiple-icon-item&quot;&gt;
+      &lt;img src=&quot;assets/img/bathroom.png&quot; &gt;
+
+    &lt;/div&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $wifi is true&gt;&gt;
+      &lt;div class=&quot;multiple-icon-item&quot;&gt;
+      &lt;img src=&quot;assets/img/wifi.png&quot; &gt;
+
+    &lt;/div&gt;
+     &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $food is true&gt;&gt;
+      &lt;div class=&quot;multiple-icon-item&quot;&gt;
+      &lt;img src=&quot;assets/img/food.png&quot; &gt;
+
+    &lt;/div&gt;
+     &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $charge is true&gt;&gt;
+      &lt;div class=&quot;multiple-icon-item&quot;&gt;
+      &lt;img src=&quot;assets/img/charge.png&quot; &gt;
+
+    &lt;/div&gt;
+     &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $stepfree is true&gt;&gt;
+      &lt;div class=&quot;multiple-icon-item&quot;&gt;
+      &lt;img src=&quot;assets/img/stepfree.png&quot; &gt;
+
+    &lt;/div&gt;
+     &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $caution is true&gt;&gt;
+     
+      &lt;div class=&quot;multiple-icon-item&quot;&gt;
+      &lt;img src=&quot;assets/img/caution.png&quot; &gt;
+
+    &lt;/div&gt;
+     &lt;&lt;/if&gt;&gt;
+&lt;/div&gt;
 &lt;/div &gt;
-&lt;/header&gt;</tw-passagedata><tw-passagedata pid="3" name="headerstory" tags="nobr" position="350,100" size="100,100">&lt;header class=&quot;story&quot;&gt;
+&lt;/header&gt;</tw-passagedata><tw-passagedata pid="3" name="headerAR" tags="nobr" position="100,225" size="100,100">&lt;header class=&quot;ar&quot; &gt;
+ &lt;div class=&quot;nav-wrapper&quot;&gt;
+    &lt;div class=&quot;nav-item&quot;&gt;
+  &lt;h2&gt;$ARtitle&lt;/h2&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class=&quot;nav-wrapper&quot;&gt;
+    &lt;div class=&quot;nav-item&quot;&gt;
+    &lt;p class=&quot;comment&quot;&gt;Press the photo &lt;br&gt; to see it transform&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    
+&lt;/header&gt;</tw-passagedata><tw-passagedata pid="4" name="headerstory" tags="nobr" position="475,100" size="100,100">&lt;header class=&quot;story&quot;&gt;
 &lt;&lt;if $showBackwards is true&gt;&gt;
   &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
@@ -333,27 +367,26 @@ setup.backThirty = () => {
   &lt;/div&gt;
   &lt;&lt;/if&gt;&gt;
 
-
-&lt;&lt;if $showMap is true&gt;&gt;
-    &lt;div class=&quot;nav-wrapper&quot;&gt;
-      &lt;div class=&quot;nav-item&quot;&gt;
-    &lt;&lt;link [img[assets/img/map.png]]&gt;&gt;
-    &lt;&lt;toggleclass &quot;#map&quot; &quot;hide&quot;&gt;&gt;
-
-    &lt;&lt;/link&gt;&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;&lt;/if&gt;&gt;
+&lt;div id=&quot;headerinstmount&quot;&gt;&lt;/div&gt;
 
 &lt;&lt;if $showForwards is true&gt;&gt;
+  &lt;&lt;if $sendOn is true&gt;&gt;
+ &lt;div class=&quot;nav-wrapper&quot; id=&quot;forIcon&quot;&gt;
+    &lt;div class=&quot;nav-item &quot; &gt;
+        &lt;a href=&quot;https://fr-concert-between-explosions.netlify.app/&quot;&gt;
+&lt;img src=&quot;assets/img/for.png&quot;&gt;&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;&lt;else&gt;&gt;
     &lt;div class=&quot;nav-wrapper&quot; id=&quot;forIcon&quot;&gt;
     &lt;div class=&quot;nav-item &quot; &gt;
          [img[Forward|assets/img/for.png][$nextpass]]
     &lt;/div&gt;
-  
   &lt;/div&gt;
-     &lt;&lt;/if&gt;&gt;
-&lt;/header&gt;</tw-passagedata><tw-passagedata pid="4" name="footer" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
+  &lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;/header&gt;</tw-passagedata><tw-passagedata pid="5" name="footer" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
 &lt;&lt;if $showBackwards is true&gt;&gt;
   &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
@@ -398,13 +431,13 @@ setup.backThirty = () => {
     &lt;/div&gt;
     &lt;/div&gt;
     &lt;&lt;/if&gt;&gt; */
-     &lt;&lt;if $showCaptionsIcon is true&gt;&gt;
+     /* &lt;&lt;if $showCaptionsIcon is true&gt;&gt;
      &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
   &lt;&lt;link [img[assets/img/captions.png]]&gt;&gt;&lt;&lt;set $captions to !$captions&gt;&gt;&lt;&lt;goto $passage&gt;&gt;&lt;&lt;/link&gt;&gt;
     &lt;/div&gt;
     &lt;/div&gt;
-    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;/if&gt;&gt; */
     /* &lt;&lt;if $showFF is true&gt;&gt;
     &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
@@ -419,7 +452,7 @@ setup.backThirty = () => {
     &lt;/div&gt;
   &lt;/div&gt;
      &lt;&lt;/if&gt;&gt;
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="5" name="footerback" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="6" name="footerback" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
   &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
         [img[Back|assets/img/back.png][$prevpass]]
@@ -429,7 +462,7 @@ setup.backThirty = () => {
  
   &lt;/div&gt;
   
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="6" name="footerfor" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="7" name="footerfor" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
 &lt;div&gt;&lt;/div&gt;
   &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
@@ -438,29 +471,65 @@ setup.backThirty = () => {
   &lt;/div&gt;
 
   
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="7" name="footerAR" tags="nobr" position="100,375" size="100,100">&lt;footer class=&quot;ar&quot;&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="8" name="footerAR" tags="nobr" position="100,375" size="100,100">&lt;footer class=&quot;ar&quot;&gt;
  &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
         [img[Back|assets/img/back.png][$prevpass]]
     &lt;/div&gt;
   &lt;/div&gt;
- 
-  &lt;div class=&quot;nav-wrapper&quot;&gt;
+  &lt;div class=&quot;nav-wrapper playpause-wrapper&quot;&gt;
+  &lt;div class=&quot;nav-item&quot; id=&quot;playpause&quot;&gt;
+      &lt;&lt;link [img[assets/img/playpause.png]]&gt;&gt;
+        &lt;&lt;if $playToggle is false&gt;&gt;
+      &lt;&lt;set $fn to setup.play()&gt;&gt;
+      &lt;&lt;set $playToggle to true&gt;&gt;
+      &lt;&lt;addclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;
+      &lt;&lt;else&gt;&gt;
+       &lt;&lt;set $fn to setup.pause()&gt;&gt;
+        &lt;&lt;set $playToggle to false&gt;&gt;
+      &lt;&lt;removeclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;
+      &lt;&lt;/if&gt;&gt;
+      &lt;&lt;/link&gt;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+   &lt;div class=&quot;nav-wrapper&quot;&gt;
+  &lt;div class=&quot;nav-item&quot;&gt;
+  &lt;&lt;link [img[assets/img/transcript.png]]&gt;&gt;
+&lt;&lt;if $transcript is false&gt;&gt;
+  &lt;&lt;set $transcript to true&gt;&gt;
+  &lt;&lt;replace &quot;#transcript&quot;&gt;&gt;
+    &lt;&lt;include $transcriptname&gt;&gt;
+  &lt;&lt;/replace&gt;&gt;
+  &lt;&lt;else&gt;&gt;
+  &lt;&lt;set $transcript to false&gt;&gt;
+  &lt;&lt;replace &quot;#transcript&quot;&gt;&gt;
+  &lt;&lt;/replace&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+  &lt;&lt;/link&gt;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+ &lt;&lt;if $showReplay is true&gt;&gt;
+     &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
-    &lt;div id=&quot;mount&quot;&gt; &lt;span class=&quot;comment&quot;&gt;Press the photo &lt;br&gt; to see it transform&lt;/span&gt;&lt;/div&gt;
-    &lt;/div&gt;&lt;/div&gt;
+    [img[Replay|assets/img/replay.png][$passage]]
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;&lt;/if&gt;&gt;
+   
+ 
     &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
        &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="8" name="footerstory" tags="nobr" position="975,100" size="100,100">&lt;footer&gt;
+&lt;/footer&gt;
+&lt;&lt;done&gt;&gt;&lt;&lt;addclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="footerstory" tags="nobr" position="1100,100" size="100,100">&lt;footer&gt;
 
-&lt;&lt;if $showCaptionsIcon is true&gt;&gt;
+/* &lt;&lt;if $showCaptionsIcon is true&gt;&gt;
 &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
       &lt;&lt;link [img[assets/img/captions.png]]&gt;&gt;
-      /* &lt;&lt;toggleclass &quot;#posterWrapper&quot; &quot;small&quot;&gt;&gt; */
+     
       &lt;&lt;if $captionToggle is true&gt;&gt;
          &lt;&lt;toggleclass &quot;#poster&quot; &quot;hide&quot;&gt;&gt;
          &lt;&lt;toggleclass &quot;#storyContainer&quot; &quot;captions&quot;&gt;&gt;
@@ -475,7 +544,7 @@ setup.backThirty = () => {
       &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
   &lt;/div&gt;
-&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt; */
 
 
 &lt;div class=&quot;nav-wrapper&quot;&gt;
@@ -504,14 +573,6 @@ setup.backThirty = () => {
 
 &lt;div class=&quot;nav-wrapper&quot;&gt;
   &lt;div class=&quot;nav-item&quot;&gt;
-    &lt;&lt;link &quot;+30s&quot;&gt;&gt;
-      &lt;&lt;set $fn to setup.addThirty()&gt;&gt;
-  &lt;&lt;/link&gt;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;nav-wrapper&quot;&gt;
-  &lt;div class=&quot;nav-item&quot;&gt;
   &lt;&lt;link [img[assets/img/transcript.png]]&gt;&gt;
 &lt;&lt;if $transcript is false&gt;&gt;
   &lt;&lt;set $transcript to true&gt;&gt;
@@ -527,26 +588,19 @@ setup.backThirty = () => {
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="9" name="footerstorywalk" tags="nobr" position="1100,100" size="100,100">&lt;footer&gt;
-
-&lt;&lt;if $showCaptionsIcon is true&gt;&gt;
 &lt;div class=&quot;nav-wrapper&quot;&gt;
-    &lt;div class=&quot;nav-item&quot;&gt;
-      &lt;&lt;link [img[assets/img/captions.png]]&gt;&gt;
-      /* &lt;&lt;toggleclass &quot;#posterWrapper&quot; &quot;small&quot;&gt;&gt; */
-      &lt;&lt;if $captionToggle is true&gt;&gt;
-         &lt;&lt;toggleclass &quot;#storyContainer&quot; &quot;captions&quot;&gt;&gt;
-          &lt;&lt;set $captionToggle to false&gt;&gt;
-      &lt;&lt;set $fn to setup.hideCap()&gt;&gt;
-          &lt;&lt;else&gt;&gt;
-          &lt;&lt;toggleclass &quot;#storyContainer&quot; &quot;captions&quot;&gt;&gt;
-          &lt;&lt;set $captionToggle to true&gt;&gt;
-      &lt;&lt;set $fn to setup.showCap()&gt;&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;&lt;/link&gt;&gt;
-&lt;/div&gt;
+  &lt;div class=&quot;nav-item&quot;&gt;
+    &lt;&lt;link &quot;+30s&quot;&gt;&gt;
+      &lt;&lt;set $fn to setup.addThirty()&gt;&gt;
+  &lt;&lt;/link&gt;&gt;
   &lt;/div&gt;
-&lt;&lt;/if&gt;&gt;
+&lt;/div&gt;
+
+
+
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="10" name="footerstorywalk" tags="nobr" position="1225,100" size="100,100">&lt;footer&gt;
+
+
 
 
 &lt;div class=&quot;nav-wrapper&quot;&gt;
@@ -573,13 +627,7 @@ setup.backThirty = () => {
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;nav-wrapper&quot;&gt;
-  &lt;div class=&quot;nav-item&quot;&gt;
-    &lt;&lt;link &quot;+30s&quot;&gt;&gt;
-      &lt;&lt;set $fn to setup.addThirty()&gt;&gt;
-  &lt;&lt;/link&gt;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+
 
 &lt;div class=&quot;nav-wrapper&quot;&gt;
   &lt;div class=&quot;nav-item&quot;&gt;
@@ -597,8 +645,15 @@ setup.backThirty = () => {
   &lt;&lt;/link&gt;&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+&lt;div class=&quot;nav-wrapper&quot;&gt;
+  &lt;div class=&quot;nav-item&quot;&gt;
+    &lt;&lt;link &quot;+30s&quot;&gt;&gt;
+      &lt;&lt;set $fn to setup.addThirty()&gt;&gt;
+  &lt;&lt;/link&gt;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="10" name="footerMap" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="11" name="footerMap" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
   &lt;div class=&quot;nav-wrapper&quot;&gt;
 
     &lt;div class=&quot;nav-item&quot;&gt;
@@ -618,47 +673,7 @@ setup.backThirty = () => {
         &lt;&lt;button &quot;I&#39;ve arrived&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="11" name="credits" tags="nobr" position="450,50" size="100,100">&lt;&lt;set $passage to &quot;credits&quot;&gt;&gt;
-&lt;&lt;set $showMap to false&gt;&gt;
-&lt;&lt;set $showAudio to false&gt;&gt;
-&lt;&lt;set $showReplay to false&gt;&gt;
-&lt;header class=&quot;credits&quot;&gt;
-&lt;div class=&quot;header-item&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;header-item&quot;&gt;
-  &lt;h1&gt;With Fire &amp; Rage&lt;/h1&gt;
-&lt;/div &gt;
-&lt;/header&gt;
-&lt;main class=&quot;credits&quot;&gt;
-&lt;p&gt;Testimonies include: &lt;/p&gt;
-&lt;h3&gt;OLYA MUKHINA&lt;/h3&gt;
-&lt;p&gt;Executive Director of the Lesya Ukrainka Theater&lt;/p&gt;
-&lt;h3&gt;STAS KONONOV&lt;/h3&gt;
-&lt;p&gt;Musician and Guitarist&lt;/p&gt;
-&lt;h3&gt;ALEVTINA SHVETSOVA&lt;/h3&gt;
-&lt;p&gt;Arts Journalist and Artist&lt;/p&gt;
-&lt;h3&gt;LUTFIE ZUDIEVA&lt;/h3&gt;
-&lt;p&gt;Civic Journalist&lt;/p&gt;
-&lt;h3&gt;OLEKSANDRA OSADCHA&lt;/h3&gt;
-&lt;p&gt;Researcher and Curator at Kharkiv School Of Photography&lt;/p&gt;
-&lt;h3&gt;SERHIY ZAKHAROV&lt;/h3&gt;
-&lt;p&gt;Artist&lt;/p&gt;
-&lt;h3&gt;VICTORIA AMELINA&lt;/h3&gt;
-&lt;p&gt;Writer and Poet&lt;/p&gt;
-&lt;h3&gt;ANNA SHARYHINA&lt;/h3&gt;
-&lt;p&gt;Activist, Cultural Manager and Founder of Sphere&lt;/p&gt;
-&lt;h3&gt;JULIA NIKOLAJEVSKA&lt;/h3&gt;
-&lt;p&gt;Musician and Cultural Manager Kharkiv Music Fest&lt;/p&gt;
-&lt;h3&gt;DMYTRO KOSTIUMINSKIJ&lt;/h3&gt;
-&lt;p&gt;Artist, Theatre director and Filmmaker&lt;/p&gt;
-&lt;br/&gt;
-&lt;p&gt;Poetry &amp; Additional Texts include:&lt;/p&gt;
-&lt;p&gt;Text Counter/retnuoC by Alexander Levitsky from Anthology24 Text by Nina Zakhozhenko from Anthology24&lt;/p&gt;
-&lt;p&gt;Poem by Aliye Kenzhalieva&lt;/p&gt;
-&lt;p&gt;Poem Ctrl+Z by Mykhailo Zharzhalio&lt;/p&gt;
-&lt;p&gt;Poem Survivor&#39;s Syndrome by Andriy Bondarenko&lt;/p&gt;
-&lt;p&gt;Poem by Ostap Slyvynsky&lt;/p&gt;
-&lt;/main&gt;
-&lt;&lt;include &quot;footerback&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="beginning" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;beginning&quot;&gt;&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="12" name="beginning" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;beginning&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;beginning&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;landing&quot;&gt;&gt;
 &lt;&lt;set $transcript to false&gt;&gt;
@@ -673,12 +688,236 @@ setup.backThirty = () => {
 &lt;main class=&quot;&quot; id=&quot;&quot;&gt;
 
 &lt;div class=&quot;poster-wrapper&quot; id=&quot;poster&quot;&gt;
-   &lt;img class=&quot;poster&quot; src=&quot;./../assets/img/place.jpeg&quot;/&gt;
+   &lt;img class=&quot;poster&quot; src=&quot;./../assets/img/place-title.jpeg&quot;/&gt;
  &lt;/div&gt;
  &lt;div class=&quot;menu-wrapper&quot;&gt;
-    &lt;&lt;button &quot;Begin&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
+    &lt;&lt;button &quot;Keep going&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
+     &lt;&lt;button &quot;I&#39;m joining the audio tour here&quot;&gt;&gt;&lt;&lt;goto &quot;framing&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+     &lt;a href=&quot;www.withfireandrage.com&quot;&gt;&lt;button&gt;Leave the Tour&lt;/button&gt;&lt;/a&gt;
 &lt;/div&gt;
-&lt;/main&gt;</tw-passagedata><tw-passagedata pid="13" name="landing" tags="nobr" position="350,225" size="100,100">&lt;&lt;set $title to &quot;Our Place, in Our City&quot;&gt;&gt;
+&lt;/main&gt;</tw-passagedata><tw-passagedata pid="13" name="framing" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;beginning&quot;&gt;&gt;
+&lt;&lt;set $passage to &quot;framing&quot;&gt;&gt;
+&lt;&lt;set $nextpass to &quot;instructions&quot;&gt;&gt;
+&lt;&lt;set $transcript to false&gt;&gt;
+&lt;&lt;set $playToggle to false&gt;&gt;
+&lt;&lt;set $captionToggle to false&gt;&gt;
+&lt;&lt;set $showForwards to true&gt;&gt;
+&lt;&lt;set $showBackwards to true&gt;&gt;
+&lt;&lt;set $showCaptionsIcon to false&gt;&gt;
+&lt;&lt;set $showMap to false&gt;&gt;
+
+&lt;main class=&quot;instructions&quot; id=&quot;&quot;&gt;
+&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+&lt;p&gt;Welcome to With Fire and Rage&lt;/p&gt;
+&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p&gt;I’m Veronika Skliarova, artist and producer from Kharkiv, Ukraine&lt;/p&gt;
+&lt;&lt;/append&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 4s&gt;&gt;&lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p&gt;I will be your guide for today
+&lt;/p&gt;
+&lt;&lt;/append&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 6s&gt;&gt;&lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p&gt;First let me show you, how to navigate your experience...
+&lt;/p&gt;
+&lt;&lt;/append&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 8s&gt;&gt;&lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p&gt;You can move forward via a button like&lt;&lt;button &quot;This&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt; 
+&lt;&lt;/append&gt;&gt;&lt;&lt;/timed&gt;&gt;
+ 
+&lt;/main&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="instructions" tags="nobr" position="475,225" size="100,100">&lt;&lt;set $prevpass to &quot;beginning&quot;&gt;&gt;
+&lt;&lt;set $passage to &quot;instructions&quot;&gt;&gt;
+&lt;&lt;set $nextpass to &quot;instructions2&quot;&gt;&gt;
+&lt;&lt;set $showMap to false&gt;&gt;
+&lt;&lt;set $showAudio to false&gt;&gt;
+&lt;&lt;set $showReplay to false&gt;&gt;
+&lt;&lt;set $showForwards to true&gt;&gt;
+&lt;&lt;set $showBackwards to true&gt;&gt;
+&lt;&lt;set $showCaptionsIcon to false&gt;&gt;
+
+
+&lt;&lt;set $map = setup.generateViewMap({originLat: 53.40907123957618,originLong: -2.984770301961675, originName: &quot;Lovelocks Coffee Shop Liverpool&quot;})&gt;&gt;
+
+
+&lt;div id=&quot;audio&quot;&gt;&lt;/div&gt;
+/* &lt;&lt;include &quot;header&quot;&gt;&gt; */
+&lt;main class=&quot;instructions&quot;&gt;
+&lt;h2&gt;Onboarding&lt;/h2&gt;
+&lt;div id=&quot;map&quot; class=&quot;hide&quot;&gt;$map&lt;/div&gt;
+&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
+&lt;&lt;timed 0.1s&gt;&gt;
+  &lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+    &lt;p&gt;This icon takes you to a map &lt;&lt;link [img[assets/img/map.png]]&gt;&gt;&lt;&lt;toggleclass &quot;#map&quot; &quot;hide&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
+  &lt;&lt;/replace&gt;&gt;
+
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;
+   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p&gt;This arrow takes you back[img[Back|assets/img/back.png][$prevpass]]&lt;/p&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 4s&gt;&gt;
+  &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p&gt;This arrow skips you forward [img[Forward|assets/img/for.png][$nextpass]]&lt;/p&gt;
+  &lt;&lt;/append&gt;&gt;
+    
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 6s&gt;&gt;
+&lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p&gt;You can replay with this icon   [img[Replay|assets/img/replay.png][$passage]]&lt;/p&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+ &lt;&lt;timed 8s&gt;&gt;
+  &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p&gt;To read a transcript of the audio press[img[Forward|assets/img/transcript.png][$nextpass]]&lt;/p&gt;
+  &lt;&lt;/append&gt;&gt;
+
+&lt;&lt;/timed&gt;&gt;
+
+ &lt;&lt;timed 10s&gt;&gt;
+  &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+&lt;/main&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="instructions2" tags="nobr" position="600,225" size="100,100">&lt;&lt;set $prevpass to &quot;instructions&quot;&gt;&gt;
+&lt;&lt;set $passage to &quot;instructions2&quot;&gt;&gt;
+&lt;&lt;set $nextpass to &quot;instructions3&quot;&gt;&gt;
+&lt;&lt;set $showMap to false&gt;&gt;
+&lt;&lt;set $showAudio to false&gt;&gt;
+&lt;&lt;set $showReplay to false&gt;&gt;
+&lt;&lt;set $showForwards to true&gt;&gt;
+&lt;&lt;set $showBackwards to true&gt;&gt;
+&lt;&lt;set $showCaptionsIcon to false&gt;&gt;
+
+&lt;div id=&quot;audio&quot;&gt;&lt;/div&gt;
+/* &lt;&lt;include &quot;header&quot;&gt;&gt; */
+&lt;main class=&quot;instructions&quot;&gt;
+&lt;h2&gt;Onboarding&lt;/h2&gt;
+&lt;div id=&quot;map&quot; class=&quot;hide&quot;&gt;$map&lt;/div&gt;
+&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
+&lt;&lt;timed 0.1s&gt;&gt;
+  &lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+    &lt;p&gt;We will travel to ten different locations&lt;/p&gt;
+  &lt;&lt;/replace&gt;&gt;
+
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;
+   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p&gt;Walking for a little over one kilometre, in short stretches &lt;/p&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 4s&gt;&gt;
+  &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p&gt;It’s up to you how fast or slow you go&lt;/p&gt;
+  &lt;&lt;/append&gt;&gt;
+    
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 6s&gt;&gt;
+&lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p&gt;The full tour takes between 90 and 120 minutes 
+&lt;/p&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+
+ &lt;&lt;timed 8s&gt;&gt;
+  &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p&gt;Listen to as much or as little as you like &lt;/p&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 10s&gt;&gt;
+  &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p&gt;You are always welcome to come back another day &lt;/p&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+
+
+ &lt;&lt;timed 12s&gt;&gt;
+  &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+&lt;/main&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="instructions3" tags="nobr" position="725,225" size="100,100">&lt;&lt;set $prevpass to &quot;instructions2&quot;&gt;&gt;
+&lt;&lt;set $passage to &quot;instructions3&quot;&gt;&gt;
+&lt;&lt;set $nextpass to &quot;landing&quot;&gt;&gt;
+&lt;&lt;set $showMap to false&gt;&gt;
+&lt;&lt;set $showAudio to false&gt;&gt;
+&lt;&lt;set $showReplay to false&gt;&gt;
+&lt;&lt;set $showForwards to true&gt;&gt;
+&lt;&lt;set $showBackwards to true&gt;&gt;
+&lt;&lt;set $showCaptionsIcon to false&gt;&gt;
+
+&lt;div id=&quot;audio&quot;&gt;&lt;/div&gt;
+/* &lt;&lt;include &quot;header&quot;&gt;&gt; */
+&lt;main class=&quot;instructions&quot;&gt;
+&lt;h2&gt;Onboarding&lt;/h2&gt;
+&lt;div id=&quot;map&quot; class=&quot;hide&quot;&gt;$map&lt;/div&gt;
+&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
+&lt;&lt;timed 0.1s&gt;&gt;
+  &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+    &lt;p&gt;At every location, I will suggest places to sit, to lean, to shelter&lt;/p&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;
+  &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+    &lt;p&gt;Make yourself comfortable, if you want take a break&lt;/p&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 4s&gt;&gt;
+  &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+    &lt;p&gt;These icons show important information and facilities  &lt;/p&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 5s&gt;&gt;
+   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+  &lt;div class=&quot;multiple-icon-wrapper&quot;&gt;
+      &lt;div class=&quot;multiple-icon-item&quot;&gt;
+      &lt;img src=&quot;assets/img/bathroom.png&quot; &gt;
+    &lt;span&gt;Bathroom &lt;/span&gt;
+    &lt;/div&gt;
+      &lt;div class=&quot;multiple-icon-item&quot;&gt;
+      &lt;img src=&quot;assets/img/wifi.png&quot; &gt;
+    &lt;span&gt;Wifi &lt;/span&gt;
+    &lt;/div&gt;
+      &lt;div class=&quot;multiple-icon-item&quot;&gt;
+      &lt;img src=&quot;assets/img/food.png&quot; &gt;
+    &lt;span&gt;Food &amp; Drink &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+   &lt;div class=&quot;multiple-icon-wrapper&quot;&gt;
+      &lt;div class=&quot;multiple-icon-item&quot;&gt;
+      &lt;img src=&quot;assets/img/stepfree.png&quot; &gt;
+    &lt;span&gt;Step-free access &lt;/span&gt;
+    &lt;/div&gt;
+      &lt;div class=&quot;multiple-icon-item&quot;&gt;
+      &lt;img src=&quot;assets/img/wifi.png&quot; &gt;
+    &lt;span&gt;Phone Charger  &lt;/span&gt;
+    &lt;/div&gt;
+      &lt;div class=&quot;multiple-icon-item&quot;&gt;
+      &lt;img src=&quot;assets/img/caution.png&quot; &gt;
+    &lt;span&gt;Caution! take care crossing roads&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+ &lt;&lt;timed 7s&gt;&gt;
+  &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+&lt;/main&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="landing" tags="nobr" position="850,225" size="100,100">&lt;&lt;set $title to &quot;Our Place, in Our City&quot;&gt;&gt;
+&lt;&lt;set $location to &quot;Lovelocks Café&quot;&gt;&gt;
 &lt;&lt;set $openOrClosed to &quot;closed&quot;&gt;&gt;
 &lt;&lt;set $prevpass to &quot;beginning&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;landing&quot;&gt;&gt;
@@ -689,7 +928,7 @@ setup.backThirty = () => {
 &lt;&lt;set $showForwards to true&gt;&gt;
 &lt;&lt;set $showBackwards to true&gt;&gt;
 &lt;&lt;set $showCaptionsIcon to false&gt;&gt;
-&lt;&lt;set $map = setup.generateViewMap({originLat: 53.40907123957618,originLong: -2.984770301961675, originName: &quot;Lovelocks Coffee Shop&quot;})&gt;&gt;
+&lt;&lt;set $map = setup.generateViewMap({originLat: 53.40907123957618,originLong: -2.984770301961675, originName: &quot;Lovelocks Coffee Shop Liverpool&quot;})&gt;&gt;
 &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;43&quot; play&gt;&gt;
 &lt;div id=&quot;audio&quot;&gt;&lt;/div&gt;
 &lt;&lt;include &quot;header&quot;&gt;&gt;
@@ -700,12 +939,10 @@ setup.backThirty = () => {
 
 &lt;p&gt;You should be outside Lovelocks Cafe &lt;/p&gt;
 &lt;p&gt;A cornerstone of inclusivity in the community&lt;/p&gt;
-&lt;p&gt;Our artwork is in the window &lt;/p&gt;
-&lt;p&gt;And the Lesbian flag for Kharkiv pride out front&lt;/p&gt;
 &lt;p&gt;Is the cafe  &lt;div class=&quot;inline-btn-wrapper&quot;&gt;&lt;&lt;link &quot;open&quot;&gt;&gt;&lt;&lt;set $openOrClosed to &quot;open&quot;&gt;&gt;&lt;&lt;goto &quot;instnar2&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or &lt;div class=&quot;inline-btn-wrapper&quot;&gt;&lt;&lt;link &quot;closed&quot;&gt;&gt;&lt;&lt;set $openOrClosed to &quot;closed&quot;&gt;&gt;&lt;&lt;goto &quot;instnar2&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;&lt;/div&gt;?&lt;/p&gt;
  
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="instnar2" tags="nobr" position="475,225" size="100,100">&lt;&lt;set $prevpass to &quot;landing&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="instnar2" tags="nobr" position="975,225" size="100,100">&lt;&lt;set $prevpass to &quot;landing&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instnar2&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;place&quot;&gt;&gt;
 &lt;&lt;set $showMap to false&gt;&gt;
@@ -715,26 +952,30 @@ setup.backThirty = () => {
 &lt;&lt;set $showBackwards to true&gt;&gt;
 &lt;&lt;set $showCaptionsIcon to false&gt;&gt;
 &lt;div id=&quot;audio&quot;&gt;&lt;/div&gt;
-&lt;&lt;include &quot;header&quot;&gt;&gt;
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;include &quot;header&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;main class=&quot;instructions&quot;&gt;
 &lt;div id=&quot;map&quot; class=&quot;hide&quot;&gt;$map&lt;/div&gt;
   &lt;&lt;if $openOrClosed is &quot;open&quot;&gt;&gt;
+  &lt;&lt;set $food to true&gt;&gt;
+  &lt;&lt;set $charge to true&gt;&gt;
   &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;44&quot; play&gt;&gt;
   &lt;p&gt;Go inside and sit down&lt;/p&gt;
-  &lt;p&gt;You dont need to buy anything&lt;/p&gt;
+  &lt;p&gt;You don&#39;t need to buy anything&lt;/p&gt;
   &lt;p&gt;But the coffee and cake come highly recommended&lt;/p&gt;
   &lt;&lt;button &quot;I&#39;m ready&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
 
   &lt;&lt;if $openOrClosed is &quot;closed&quot;&gt;&gt;
+  &lt;&lt;set $food to false&gt;&gt;
+  &lt;&lt;set $charge to false&gt;&gt;
   &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;46&quot; play&gt;&gt;
   &lt;p&gt;Sit on the steps across the road&lt;/p&gt;
   &lt;p&gt;Taking in the buildings and streets around you&lt;/p&gt;
     &lt;&lt;button &quot;I&#39;m ready&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="place" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;instnar2&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="place" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;instnar2&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;place&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;instnar3&quot;&gt;&gt;
 &lt;&lt;set $transcript to false&gt;&gt;
@@ -743,40 +984,46 @@ setup.backThirty = () => {
 &lt;&lt;set $showBackwards to true&gt;&gt;
 &lt;&lt;set $showCaptionsIcon to true&gt;&gt;
 &lt;&lt;set $showMap to false&gt;&gt;
+&lt;&lt;set $sendOn to false&gt;&gt;
 &lt;&lt;set $transcriptname to  &quot;placetranscript&quot;&gt;&gt;
 &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;45&quot; play&gt;&gt;
 &lt;&lt;include &quot;headerstory&quot;&gt;&gt;
 &lt;main class=&quot;story&quot; id=&quot;storyContainer&quot;&gt;
 &lt;audio id=&quot;audio&quot; &gt;
-  &lt;source src=&quot;https://www.dropbox.com/s/5qadd3byh4765me/07.%20OUR%20PLACE%20IN%20OUR%20CITY%20V1.mp3?raw=1&quot;&gt;
+  &lt;source src=&quot;https://withfireandrageliverpool.com/audio/PC/PD6V1.mp3&quot;&gt;
   &lt;track kind=&quot;captions&quot; srclang=&quot;en&quot; label=&quot;English captions&quot; id=&quot;captrack&quot; default&gt;
 &lt;/audio&gt;
 &lt;div class=&quot;poster-wrapper&quot; id=&quot;poster&quot;&gt;
    &lt;img class=&quot;poster&quot; src=&quot;./../assets/img/place.jpeg&quot;/&gt;
  &lt;/div&gt;
   
-&lt;div id=&quot;caption&quot; class=&quot;hide&quot;&gt;&lt;/div&gt;
+
 &lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
-&lt;div id=&quot;mount&quot;  &gt;&lt;p class=&quot;comment&quot;&gt; To listen to &lt;em&gt;$title&lt;/em&gt; press &lt;div class=&quot;inline-btn-wrapper&quot;&gt;
+&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#headerinstmount&quot;&gt;&gt;&lt;p class=&quot;comment&quot;&gt; To listen to &lt;em&gt;$title&lt;/em&gt; press &lt;div class=&quot;inline-btn-wrapper&quot;&gt;
 &lt;&lt;link &quot;play&quot;&gt;&gt;
         &lt;&lt;if $playToggle is false&gt;&gt;
       &lt;&lt;set $fn to setup.play()&gt;&gt;
       &lt;&lt;set $playToggle to true&gt;&gt;
       &lt;&lt;addclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;
       &lt;&lt;/if&gt;&gt;
-     
-
-&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+&lt;&lt;replace &quot;#headerinstmount&quot;&gt;&gt;
 &lt;p class=&quot;comment&quot;&gt; When you&#39;re finished listening, let me know &lt;div class=&quot;inline-btn-wrapper&quot;&gt;&lt;&lt;button &quot;I&#39;m finished&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/p&gt;
-
  &lt;&lt;/replace&gt;&gt;
- &lt;&lt;/link&gt;&gt;&lt;/div&gt;&lt;/p&gt;&lt;/div&gt;
+ &lt;&lt;/link&gt;&gt;
+  &lt;/div&gt;&lt;/p&gt;
+ &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+ &lt;&lt;timed 30s&gt;&gt;
+ &lt;&lt;replace &quot;#headerinstmount&quot;&gt;&gt;
+&lt;p class=&quot;comment&quot;&gt; When you&#39;re finished listening, let me know &lt;div class=&quot;inline-btn-wrapper&quot;&gt;&lt;&lt;button &quot;I&#39;m finished&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/p&gt;
+ &lt;&lt;/replace&gt;&gt;
+
+ &lt;&lt;/timed&gt;&gt;
+
 &lt;/main&gt;
 
-&lt;&lt;include &quot;footerstory&quot;&gt;&gt;
-&lt;&lt;done&gt;&gt;
-  &lt;&lt;set $addC to setup.addCaptions(&quot;place&quot;)&gt;&gt;
-&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="placetranscript" tags="" position="725,225" size="100,100">&lt;h2&gt;Transcript&lt;/h2&gt;
+&lt;&lt;include &quot;footerstory&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="placetranscript" tags="" position="1225,225" size="100,100">&lt;h2&gt;Transcript&lt;/h2&gt;
 
 NARRATOR:
 Why do people internationally only want to see us as victims?
@@ -812,7 +1059,7 @@ Before the 24th February, Kharkiv had a lot of trade with Russia and people came
 I was a pacifist. Now I am really confused with what I can do with my peaceful beliefs. And how I can realise my own values.
 It&#39;s important to continue to choose human rights every time. 
 This is why we continue to organise our events. To make sure we have our place in our own city, to speak aloud.
-Because we are fighting not only against the Russian army but we are fighting for our values.</tw-passagedata><tw-passagedata pid="17" name="instnar3" tags="nobr" position="850,225" size="100,100">&lt;&lt;set $prevpass to &quot;place&quot;&gt;&gt;
+Because we are fighting not only against the Russian army but we are fighting for our values.</tw-passagedata><tw-passagedata pid="21" name="instnar3" tags="nobr" position="100,350" size="100,100">&lt;&lt;set $prevpass to &quot;place&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instnar3&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;AR1&quot;&gt;&gt;
 &lt;&lt;set $showMap to true&gt;&gt;
@@ -836,7 +1083,7 @@ Because we are fighting not only against the Russian army but we are fighting fo
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="AR1" tags="nobr" position="450,50" size="100,100">&lt;&lt;set $prevpass to &quot;instnar3&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="AR1" tags="nobr" position="450,50" size="100,100">&lt;&lt;set $prevpass to &quot;instnar3&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;AR1&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;instnar5&quot;&gt;&gt;
 &lt;&lt;set $showMap to false&gt;&gt;
@@ -845,12 +1092,18 @@ Because we are fighting not only against the Russian army but we are fighting fo
 &lt;&lt;set $showBackwards to true&gt;&gt;
 &lt;&lt;set $showForwards to true&gt;&gt;
 &lt;&lt;set $showCaptionsIcon to false&gt;&gt;
+&lt;&lt;set $ARtitle to &quot; Performance Interventions&quot;&gt;&gt;
+&lt;&lt;set $transcriptname to  &quot;ARtranscript&quot;&gt;&gt;
 &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;47.5&quot; play&gt;&gt;
-/* &lt;&lt;include &quot;header&quot;&gt;&gt; */
-/* OPEN */
-&lt;main class=&quot;ar&quot;&gt;
+&lt;&lt;include &quot;headerAR&quot;&gt;&gt;
 
-  &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot;&gt;
+&lt;audio id=&quot;audio&quot; &gt;
+  &lt;source src=&quot;https://withfireandrageliverpool.com/audio/PC/PD6V1.mp3&quot;&gt;
+  &lt;track kind=&quot;captions&quot; srclang=&quot;en&quot; label=&quot;English captions&quot; id=&quot;captrack&quot; default&gt;
+&lt;/audio&gt;
+&lt;main class=&quot;ar portrait&quot;&gt;
+
+  &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot; style=&quot;min-height: 66vh;&quot;&gt;
     &lt;div class=&quot;hidden-img-wrapper touch transparent&quot; id=&quot;reveal&quot; &gt;
         &lt;img src=&quot;./assets/img/gifs/ar1open.gif&quot; class=&quot;&quot;&gt;
       &lt;/div&gt;
@@ -859,33 +1112,14 @@ Because we are fighting not only against the Russian army but we are fighting fo
       &lt;/div&gt;
   &lt;/div&gt;
 
-
+&lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footerAR&quot;&gt;&gt;
-&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;
+&lt;&lt;done&gt;&gt;
+&lt;&lt;removeclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;
+&lt;&lt;set $s to setup.startup(true)&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="ARtranscript" tags="" position="350,350" size="100,100">Anna Sharyhina and her partner create a performance intervention, highlighting the rights of women including those who are lesbian and bisexual. 
 
-/* :: instnar4 [nobr]
-&lt;&lt;set $prevpass to &quot;AR1&quot;&gt;&gt;
-&lt;&lt;set $passage to &quot;instnar4&quot;&gt;&gt;
-&lt;&lt;set $nextpass to &quot;AR2&quot;&gt;&gt;
-&lt;&lt;set $showMap to true&gt;&gt;
-&lt;&lt;set $showAudio to false&gt;&gt;
-&lt;&lt;set $showReplay to true&gt;&gt;
-&lt;&lt;set $showBackwards to true&gt;&gt;
-&lt;&lt;set $showForwards to true&gt;&gt;
-&lt;&lt;set $showCaptionsIcon to false&gt;&gt;
-&lt;&lt;set $map = setup.generateDirectionsMap(53.4030572538972, -2.969504715141457,53.4030572538972, -2.969504715141457)&gt;&gt;
-&lt;div id=&quot;audio&quot;&gt;&lt;/div&gt;
-
-&lt;main class=&quot;instructions&quot;&gt;
-&lt;div id=&quot;map&quot; class=&quot;hide&quot;&gt;$map&lt;/div&gt;
-&lt;p&gt;Go outside and cross the road &lt;/p&gt;
-&lt;p&gt;Face the Liverpool Everyman&lt;/p&gt;
-&lt;p&gt;Hold up your phone &lt;/p&gt;
-
-  &lt;&lt;button &quot;I&#39;m in position&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt; */</tw-passagedata><tw-passagedata pid="19" name="instnar5" tags="nobr" position="1100,225" size="100,100">&lt;&lt;set $prevpass to &quot;instnar3&quot;&gt;&gt;
+Walking the streets of Kharkiv, which have been heavily bombed, they carried two flags, one for Ukraine and the other the Lesbian flag for Kharkiv pride.</tw-passagedata><tw-passagedata pid="24" name="instnar5" tags="nobr" position="475,350" size="100,100">&lt;&lt;set $prevpass to &quot;instnar3&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instnar5&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;streets3&quot;&gt;&gt;
 &lt;&lt;set $showMap to true&gt;&gt;
@@ -894,7 +1128,7 @@ Because we are fighting not only against the Russian army but we are fighting fo
 &lt;&lt;set $showBackwards to true&gt;&gt;
 &lt;&lt;set $showForwards to true&gt;&gt;
 &lt;&lt;set $showCaptionsIcon to false&gt;&gt;
-&lt;&lt;set $map =  setup.generateDirectionsMap({originLat: 53.40907123957618,originLong: -2.984770301961675, originName: &quot;Lovelocks Coffee Shop&quot;},&quot;Moorfields Station&quot;)&gt;&gt;
+&lt;&lt;set $map =  setup.generateDirectionsMap({originLat: 53.40907123957618,originLong: -2.984770301961675, originName: &quot;Lovelocks Coffee Shop Liverpool&quot;},&quot;Moorfields Station Liverpool Old Hall Street&quot;)&gt;&gt;
 &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;50&quot; play&gt;&gt;
 &lt;div id=&quot;audio&quot;&gt;&lt;/div&gt;
 
@@ -905,7 +1139,7 @@ Because we are fighting not only against the Russian army but we are fighting fo
 
   &lt;&lt;button &quot;Let&#39;s go&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="streets3" tags="nobr" position="1225,225" size="100,100">&lt;&lt;set $prevpass to &quot;instnar5&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="streets3" tags="nobr" position="600,350" size="100,100">&lt;&lt;set $prevpass to &quot;instnar5&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;streets3&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;end&quot;&gt;&gt;
 &lt;&lt;set $showMap to true&gt;&gt;
@@ -916,13 +1150,14 @@ Because we are fighting not only against the Russian army but we are fighting fo
 &lt;&lt;set $showForwards to true&gt;&gt;
 &lt;&lt;set $showCaptionsIcon to true&gt;&gt;
 &lt;&lt;set $transcriptname to  &quot;streets3transcript&quot;&gt;&gt;
-/* Everyman to 1931  */
+&lt;&lt;set $sendOn to true&gt;&gt;
+/* Lovelocks to Moorfields  */
 &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;50.5&quot; play&gt;&gt;
-&lt;&lt;set $map =  setup.generateDirectionsMap({originLat: 53.40907123957618,originLong: -2.984770301961675, originName: &quot;Lovelocks Coffee Shop&quot;},&quot;Moorfields Station&quot;)&gt;&gt;
+&lt;&lt;set $map =  setup.generateDirectionsMap({originLat: 53.40907123957618,originLong: -2.984770301961675, originName: &quot;Lovelocks Coffee Shop Liverpool&quot;},&quot;Moorfields Station Liverpool Old Hall Street&quot;)&gt;&gt;
 &lt;&lt;include &quot;headerstory&quot;&gt;&gt;
 &lt;main class=&quot;story&quot; id=&quot;storyContainer&quot; &gt;
 &lt;audio id=&quot;audio&quot; &gt;
-  &lt;source src=&quot;https://www.dropbox.com/s/5em2nsmn6qykjci/07.%20THE%20STREETS%20PART%20Three%20V1.mp3?raw=1&quot;&gt;
+  &lt;source src=&quot;https://withfireandrageliverpool.com/audio/PC/streets3v2.mp3&quot;&gt;
   &lt;track kind=&quot;captions&quot; srclang=&quot;en&quot; label=&quot;English captions&quot; id=&quot;captrack&quot; default&gt;
 &lt;/audio&gt;
 
@@ -930,39 +1165,54 @@ Because we are fighting not only against the Russian army but we are fighting fo
 /* &lt;div class=&quot;poster-wrapper hide&quot; id=&quot;poster&quot;&gt;
    &lt;img class=&quot;poster&quot; src=&quot;./../assets/img/obpy.jpeg&quot;/&gt;
  &lt;/div&gt; */
-&lt;div id=&quot;caption&quot; class=&quot;hide&quot; &gt;&lt;/div&gt;
+&lt;div class=&quot;caution&quot; &gt;&lt;img src=&quot;assets/img/caution.png&quot;&gt;&lt;p&gt;Take care crossing roads &lt;/p&gt;&lt;/div&gt;
 &lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 
-&lt;&lt;timed 1s&gt;&gt;
-  &lt;&lt;replace &quot;#mount&quot;&gt;&gt;  
-&lt;p class=&quot;comment&quot;&gt;The map &lt;&lt;link [img[assets/img/map.png]]&gt;&gt;&lt;&lt;/link&gt;&gt; will help guide you&lt;/p&gt;
+
+
+ &lt;&lt;timed 0.2s&gt;&gt;
+  &lt;&lt;replace &quot;#headerinstmount&quot;&gt;&gt;  
+&lt;p class=&quot;comment&quot;&gt;The map will help guide you&lt;/p&gt;
 &lt;&lt;/replace&gt;&gt;
  &lt;&lt;/timed&gt;&gt;
 
  &lt;&lt;timed 6s&gt;&gt;
-  &lt;&lt;replace &quot;#mount&quot;&gt;&gt;  
+  &lt;&lt;replace &quot;#headerinstmount&quot;&gt;&gt;  
 &lt;p class=&quot;comment&quot;&gt;As you begin to walk press  &lt;div class=&quot;inline-btn-wrapper&quot;&gt;
 &lt;&lt;link &quot;play&quot;&gt;&gt;
-      &lt;&lt;replace &quot;#mount&quot;&gt;&gt;
-    &lt;p class=&quot;comment&quot;&gt; When you&#39;re finished listening, let me know &lt;div class=&quot;inline-btn-wrapper&quot;&gt;&lt;&lt;button &quot;I&#39;m finished&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/p&gt;
+  &lt;&lt;timed 4s&gt;&gt;
+      &lt;&lt;replace &quot;#headerinstmount&quot;&gt;&gt;
+    &lt;p class=&quot;comment&quot;&gt; Are you outside Moorfields Train Station, on Old Hall Street? 
+    &lt;a href=&quot;https://fr-our-place-in-our-city.netlify.app/&quot;&gt;
+&lt;button&gt;I&#39;m here&lt;/button&gt;&lt;/a&gt;
+    &lt;/p&gt;
     &lt;&lt;/replace&gt;&gt;
+   &lt;&lt;/timed&gt;&gt;
         &lt;&lt;if $playToggle is false&gt;&gt;
       &lt;&lt;set $fn to setup.play()&gt;&gt;
       &lt;&lt;set $playToggle to true&gt;&gt;
       &lt;&lt;addclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;
       &lt;&lt;/if&gt;&gt;
-      &lt;&lt;/link&gt;&gt;&lt;/div&gt;&lt;/p&gt;
 
+      &lt;&lt;/link&gt;&gt;
+      &lt;/div&gt;&lt;/p&gt;
       &lt;&lt;/replace&gt;&gt;
+ &lt;&lt;/timed&gt;&gt;
+
+  &lt;&lt;timed 30s&gt;&gt;
+&lt;&lt;replace &quot;#headerinstmount&quot;&gt;&gt;
+    &lt;p class=&quot;comment&quot;&gt; Are you outside Moorfields Train Station, on Old Hall Street? 
+    &lt;a href=&quot;https://fr-our-place-in-our-city.netlify.app/&quot;&gt;
+&lt;button&gt;I&#39;m here&lt;/button&gt;&lt;/a&gt;
+    &lt;/p&gt;
+    &lt;&lt;/replace&gt;&gt;
+
  &lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
 
-&lt;&lt;include &quot;footerstorywalk&quot;&gt;&gt;
-&lt;&lt;done&gt;&gt;
-  &lt;&lt;set $addC to setup.addCaptions(&quot;streets3&quot;)&gt;&gt;
-&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="streets3transcript" tags="" position="100,350" size="100,100">&lt;h2&gt;Transcript&lt;/h2&gt;
+&lt;&lt;include &quot;footerstorywalk&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="streets3transcript" tags="" position="725,350" size="100,100">&lt;h2&gt;Transcript&lt;/h2&gt;
 
 NARRATOR:
 Winter arrives again, and the new year begins with the sound of rockets instead of fireworks.
@@ -997,7 +1247,7 @@ Now, when I walk the streets in Kharkiv, I rarely see cars or people.
 The shops and buildings a place of plastic decoration, as emptiness and silence replace something that was once full of life.
 Maybe you experienced this during the lockdown? A distant memory for you, after everything went back to normal. 
 We are not in normal circumstances. It is silent here, because many people are gone, as our cities, our culture, our country, is being erased from the earth’s surface.
-When I asked activist and artist Anna Sharyhina, what song we could play after hearing her story, she told me she had stopped listening to music. “You need to be able to hear the air raid alarm.” She said, “So play that, or silence”...</tw-passagedata><tw-passagedata pid="22" name="end" tags="nobr" position="225,350" size="100,100">&lt;&lt;set $prevpass to &quot;streets3&quot;&gt;&gt;
+When I asked activist and artist Anna Sharyhina, what song we could play after hearing her story, she told me she had stopped listening to music. “You need to be able to hear the air raid alarm.” She said, “So play that, or silence”...</tw-passagedata><tw-passagedata pid="27" name="end" tags="nobr" position="850,350" size="100,100">&lt;&lt;set $prevpass to &quot;streets3&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;end&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;end&quot;&gt;&gt;
 &lt;&lt;set $showMap to false&gt;&gt;
