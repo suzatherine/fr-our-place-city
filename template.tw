@@ -1220,7 +1220,7 @@ Walking the streets of Kharkiv, which have been heavily bombed, they carried two
 <<set $showBackwards to true>>
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to false>>
-<<set $map =  setup.generateDirectionsMap({originLat: 53.40907123957618,originLong: -2.984770301961675, originName: "Lovelocks Coffee Shop Liverpool"},"Moorfields Station Liverpool Old Hall Street")>>
+<<set $map =  setup.generateDirectionsMap({originLat: 53.40907123957618,originLong: -2.984770301961675, originName: "Lovelocks Coffee Shop Liverpool"},"4 Old Hall Street Liverpool L3 9RQ")>>
 <<audio ":all" stop>><<audio "50" play>>
 <div id="audio"></div>
 
@@ -1251,7 +1251,8 @@ Walking the streets of Kharkiv, which have been heavily bombed, they carried two
 <<set $sendOn to true>>
 /* Lovelocks to Moorfields  */
 <<audio ":all" stop>><<audio "50.5" play>>
-<<set $map =  setup.generateDirectionsMap({originLat: 53.40907123957618,originLong: -2.984770301961675, originName: "Lovelocks Coffee Shop Liverpool"},"Moorfields Station Liverpool Old Hall Street")>>
+<<set $map =  setup.generateDirectionsMap({originLat: 53.40907123957618,originLong: -2.984770301961675, originName: "Lovelocks Coffee Shop Liverpool"},"4 Old Hall Street Liverpool L3 9RQ")>>
+
 <<include "headerstory">>
 <main class="story" id="storyContainer" >
 <audio id="audio" >
