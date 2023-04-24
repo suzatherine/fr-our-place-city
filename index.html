@@ -754,7 +754,7 @@ setup.backThirty = () => {
 &lt;&lt;/append&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 8s&gt;&gt;&lt;&lt;append &quot;#mount&quot;&gt;&gt;
-&lt;p&gt;You can move forward via a button like&lt;&lt;button &quot;This&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt; 
+&lt;p&gt;To move forward press a button like &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt; 
 &lt;&lt;/append&gt;&gt;&lt;&lt;/timed&gt;&gt;
  
 &lt;/main&gt;
@@ -889,7 +889,7 @@ setup.backThirty = () => {
 &lt;main class=&quot;instructions&quot;&gt;
 &lt;h2&gt;Onboarding&lt;/h2&gt;
 &lt;div id=&quot;map&quot; class=&quot;hide&quot;&gt;$map&lt;/div&gt;
-&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;mount&quot; class=&quot;onboarding&quot;&gt;&lt;/div&gt;
 &lt;&lt;timed 0.1s&gt;&gt;
   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
     &lt;p&gt;At every location, I will suggest places to sit, to lean, to shelter&lt;/p&gt;
@@ -928,12 +928,12 @@ setup.backThirty = () => {
     &lt;span&gt;Step-free access &lt;/span&gt;
     &lt;/div&gt;
       &lt;div class=&quot;multiple-icon-item&quot;&gt;
-      &lt;img src=&quot;assets/img/wifi.png&quot; &gt;
+      &lt;img src=&quot;assets/img/charge.png&quot; &gt;
     &lt;span&gt;Phone Charger  &lt;/span&gt;
     &lt;/div&gt;
       &lt;div class=&quot;multiple-icon-item&quot;&gt;
       &lt;img src=&quot;assets/img/caution.png&quot; &gt;
-    &lt;span&gt;Caution! take care crossing roads&lt;/span&gt;
+    &lt;span&gt;Caution!&lt;/span&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
@@ -1019,7 +1019,7 @@ setup.backThirty = () => {
 &lt;&lt;include &quot;headerstory&quot;&gt;&gt;
 &lt;main class=&quot;story&quot; id=&quot;storyContainer&quot;&gt;
 &lt;audio id=&quot;audio&quot; &gt;
-  &lt;source src=&quot;https://withfireandrageliverpool.com/audio/PC/PD6V1.mp3&quot;&gt;
+  &lt;source src=&quot;https://withfireandrageliverpool.com/audio/PC/placecityv2.mp3&quot;&gt;
   &lt;track kind=&quot;captions&quot; srclang=&quot;en&quot; label=&quot;English captions&quot; id=&quot;captrack&quot; default&gt;
 &lt;/audio&gt;
 &lt;div class=&quot;poster-wrapper&quot; id=&quot;poster&quot;&gt;
@@ -1160,9 +1160,9 @@ Because we are fighting not only against the Russian army but we are fighting fo
   &lt;source src=&quot;https://withfireandrageliverpool.com/audio/PC/PD6V1.mp3&quot;&gt;
   &lt;track kind=&quot;captions&quot; srclang=&quot;en&quot; label=&quot;English captions&quot; id=&quot;captrack&quot; default&gt;
 &lt;/audio&gt;
-&lt;main class=&quot;ar portrait&quot;&gt;
+&lt;main class=&quot;ar &quot;&gt;
 
-  &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot; style=&quot;min-height: 66vh;&quot;&gt;
+  &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot; &gt;
     &lt;div class=&quot;hidden-img-wrapper touch transparent&quot; id=&quot;reveal&quot; &gt;
         &lt;img src=&quot;assets/img/gifs/ar1open.gif&quot; class=&quot;&quot;&gt;
       &lt;/div&gt;
@@ -1176,7 +1176,10 @@ Because we are fighting not only against the Russian army but we are fighting fo
 &lt;&lt;include &quot;footerAR&quot;&gt;&gt;
 &lt;&lt;done&gt;&gt;
 &lt;&lt;removeclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;
-&lt;&lt;set $s to setup.startup(true)&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="ARtranscript" tags="" position="475,350" size="100,100">Anna Sharyhina and her partner create a performance intervention, highlighting the rights of women including those who are lesbian and bisexual. 
+&lt;&lt;set $s to setup.startup(true)&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="ARtranscript" tags="" position="475,350" size="100,100">&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+Anna Sharyhina and her partner create a performance intervention, highlighting the rights of women including those who are lesbian and bisexual. 
 
 Walking the streets of Kharkiv, which have been heavily bombed, they carried two flags, one for Ukraine and the other the Lesbian flag for Kharkiv pride.</tw-passagedata><tw-passagedata pid="25" name="instnar5" tags="nobr" position="600,350" size="100,100">&lt;&lt;set $prevpass to &quot;instnar3&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instnar5&quot;&gt;&gt;

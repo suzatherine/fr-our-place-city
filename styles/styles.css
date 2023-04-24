@@ -399,6 +399,15 @@ main.instructions > p.amenities {
   text-align: center;
 }
 
+.onboarding > .multiple-icon-wrapper > .multiple-icon-item {
+  width: 33%;
+  max-width: 33%;
+}
+
+.onboarding > .multiple-icon-wrapper > .multiple-icon-item > span {
+  font-size: 1.2rem;
+}
+
 /* END  */
 
 main.end {

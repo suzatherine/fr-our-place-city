@@ -729,7 +729,7 @@ setup.backThirty = () => {
 <</append>><</timed>>
 
 <<timed 8s>><<append "#mount">>
-<p>You can move forward via a button like<<button "This">><<goto $nextpass>><</button>></p> 
+<p>To move forward press a button like <<button "Next">><<goto $nextpass>><</button>></p> 
 <</append>><</timed>>
  
 </main>
@@ -877,7 +877,7 @@ setup.backThirty = () => {
 <main class="instructions">
 <h2>Onboarding</h2>
 <div id="map" class="hide">$map</div>
-<div id="mount"></div>
+<div id="mount" class="onboarding"></div>
 <<timed 0.1s>>
   <<append "#mount">>
     <p>At every location, I will suggest places to sit, to lean, to shelter</p>
@@ -916,12 +916,12 @@ setup.backThirty = () => {
     <span>Step-free access </span>
     </div>
       <div class="multiple-icon-item">
-      <img src="assets/img/wifi.png" >
+      <img src="assets/img/charge.png" >
     <span>Phone Charger  </span>
     </div>
       <div class="multiple-icon-item">
       <img src="assets/img/caution.png" >
-    <span>Caution! take care crossing roads</span>
+    <span>Caution!</span>
     </div>
 </div>
 
@@ -1024,7 +1024,7 @@ setup.backThirty = () => {
 <<include "headerstory">>
 <main class="story" id="storyContainer">
 <audio id="audio" >
-  <source src="https://withfireandrageliverpool.com/audio/PC/PD6V1.mp3">
+  <source src="https://withfireandrageliverpool.com/audio/PC/placecityv2.mp3">
   <track kind="captions" srclang="en" label="English captions" id="captrack" default>
 </audio>
 <div class="poster-wrapper" id="poster">
@@ -1181,9 +1181,9 @@ Because we are fighting not only against the Russian army but we are fighting fo
   <source src="https://withfireandrageliverpool.com/audio/PC/PD6V1.mp3">
   <track kind="captions" srclang="en" label="English captions" id="captrack" default>
 </audio>
-<main class="ar portrait">
+<main class="ar ">
 
-  <div class="ar-imgs-container one" id="ARContainer" style="min-height: 66vh;">
+  <div class="ar-imgs-container one" id="ARContainer" >
     <div class="hidden-img-wrapper touch transparent" id="reveal" >
         <img src="assets/img/gifs/ar1open.gif" class="">
       </div>
@@ -1200,6 +1200,9 @@ Because we are fighting not only against the Russian army but we are fighting fo
 <<set $s to setup.startup(true)>><</done>>
 
 :: ARtranscript
+<br>
+<br>
+<br>
 Anna Sharyhina and her partner create a performance intervention, highlighting the rights of women including those who are lesbian and bisexual. 
 
 Walking the streets of Kharkiv, which have been heavily bombed, they carried two flags, one for Ukraine and the other the Lesbian flag for Kharkiv pride.
