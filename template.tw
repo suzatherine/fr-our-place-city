@@ -988,6 +988,8 @@ setup.backThirty = () => {
   <p>Go inside and sit down</p>
   <p>You don't need to buy anything</p>
   <p>But the coffee and cake come highly recommended</p>
+  <div class="caution" ><img src="assets/img/charge.png"><p>Ask at cafe</p></div>
+  <br>
   <<button "I'm ready">><<goto $nextpass>><</button>>
 <</if>>
 
@@ -1280,7 +1282,7 @@ Walking the streets of Kharkiv, which have been heavily bombed, they carried two
   <<replace "#headerinstmount">>  
 <p class="comment">As you begin to walk press  <div class="inline-btn-wrapper">
 <<link "play">>
-  <<timed 4s>>
+  <<timed 15s>>
       <<replace "#headerinstmount">>
     <p class="comment"> Are you outside Moorfields Train Station, on Old Hall Street? 
     <a href="https://withfireandrageliverpool.com/concert">
