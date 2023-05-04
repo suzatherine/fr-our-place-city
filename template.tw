@@ -42,7 +42,7 @@ iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyB7uJuBjDcK-tb0aJpTjaKA1ZNLWhEPN5M&center=${originLat},${originLong}&zoom=17&origin=${originPlaceId}&destination=${destination}&mode=walking`)
 iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyB7uJuBjDcK-tb0aJpTjaKA1ZNLWhEPN5M&center=${originLat},${originLong}&zoom=17&origin=${originName}&destination=${destination}${waypointsString}&mode=walking`)
 const mount = document.getElementById("mapMount")
-console.log(iFrame)
+// console.log(iFrame)
 return iFrame
 // this.mapMount.appendChild(iFrame)
 }
@@ -55,7 +55,7 @@ iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("allowfullscreen")
 iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyCSbMwR1cUMfnIAh0Pxi0F1N16kvDGZXGU&center=${origin[0]},${origin[1]}&zoom=18&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&waypoints=${wayp}&mode=walking`)
 const mount = document.getElementById("mapMount")
-console.log(iFrame)
+// console.log(iFrame)
 return iFrame
 // this.mapMount.appendChild(iFrame)
 }
@@ -74,7 +74,7 @@ iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("allowfullscreen")
 iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/place?key=AIzaSyB7uJuBjDcK-tb0aJpTjaKA1ZNLWhEPN5M&center=${originLat},${originLong}&q=${originName}&zoom=17`)
 const mount = document.getElementById("mapMount")
-console.log(iFrame)
+// console.log(iFrame)
 return iFrame
 // this.mapMount.appendChild(iFrame)
 }
@@ -225,6 +225,7 @@ setup.backThirty = () => {
 <<cacheaudio "49" "assets/audio/49.mp3">>
 <<cacheaudio "50.5" "assets/audio/50.5v2.mp3">>
 <<cacheaudio "50" "assets/audio/50.mp3">>
+<<cacheaudio "PD10V2" "assets/audio/PD10V2.mp3">>
 <<waitforaudio>>
 
 
@@ -290,6 +291,22 @@ setup.backThirty = () => {
     <p class="comment">Press the photo <br> to see it transform</p>
     </div>
     </div>
+    
+</header>
+
+:: headerEm [nobr]{"position":"100,225","size":"100,100"}
+
+<header class="ar" >
+ <div class="nav-wrapper">
+    <div class="nav-item">
+  <h2>$ARtitle</h2>
+ </div>
+ </div>
+ /* <div class="nav-wrapper">
+    <div class="nav-item">
+
+    </div>
+    </div> */ 
     
 </header>
 
@@ -1167,7 +1184,7 @@ Because we are fighting not only against the Russian army but we are fighting fo
 :: AR1 [nobr]{"position":"450,50","size":"100,100"}
 <<set $prevpass to "instnar3">>
 <<set $passage to "AR1">>
-<<set $nextpass to "instnar5">>
+<<set $nextpass to "embroid1">>
 <<set $showMap to false>>
 <<set $showAudio to false>>
 <<set $showReplay to true>>
@@ -1210,10 +1227,88 @@ Anna Sharyhina and her partner create a performance intervention, highlighting t
 Walking the streets of Kharkiv, which have been heavily bombed, they carried two flags, one for Ukraine and the other the Lesbian flag for Kharkiv pride.
 
 
+:: embroid1 [nobr]
+<<set $prevpass to "instnar3">>
+<<set $passage to "embroid1">>
+<<set $nextpass to "embroid2">>
+<<set $showMap to false>>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showBackwards to true>>
+<<set $showForwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<<audio ":all" stop>><<audio "PD10V2" play>>
+<div id="audio"></div>
+
+<main class="instructions">
+
+<p>Can you spot the black and white embroidered art?</p>
+
+<p>It’s hanging up inside Lovelooks cafe</p>
+
+
+ <div class="caution" ><img src="assets/img/caution.png"><p>It’s in the window by our artwork</p></div>
+<br/>
+  <<button "Yes">><<goto $nextpass>><</button>>
+</main>
+<<include "footer">>
+
+
+
+:: embroid2 [nobr]{"position":"450,50","size":"100,100"}
+<<set $prevpass to "embroid1">>
+<<set $passage to "embroid2">>
+<<set $nextpass to "instnar5">>
+<<set $showMap to false>>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showBackwards to true>>
+<<set $showForwards to true>>
+<<set $showCaptionsIcon to false>>
+<<set $ARtitle to "Writer Lesya Ukainka">>
+<<set $transcriptname to  "Emtranscript">>
+<<audio ":all" stop>>
+
+<<include "headerEm">>
+<audio id="audio" autoplay>
+  <source src="https://withfireandrageliverpool.com/audio/PC/PD9V1.mp3">
+
+</audio>
+<main class="ar">
+
+ <div class="ar-imgs-container one" id="ARContainer">
+  
+      <img src="assets/img/Ukainka.jpeg" class="">
+
+  </div>
+  <div id="transcript"></div>
+</main>
+
+<<include "footerAR">>
+<<done>>
+<<addclass "#playpause" "playhighlight">>
+<</done>>
+
+
+:: Emtranscript
+<br>
+Lesya Ukainka was a poet, playwright, and activist
+
+Born at the end of the 19th century, she was one of the first people to claim her identity as a Ukrainian 
+
+Ukainka spoke eight languages, and adapted the plots of ancient stories, to the context of Ukraine being colonised by Russia. Shaping the narratives through the perspective of women.
+
+After she died, she was promoted by Russians, whilst her family were arrested and taken to the gulag.
+
+In one of her poems, she writes: 
+
+“My only weapon is the word”
+
 
 
 :: instnar5 [nobr]
-<<set $prevpass to "instnar3">>
+<<set $prevpass to "embroid2">>
 <<set $passage to "instnar5">>
 <<set $nextpass to "streets3">>
 <<set $showMap to true>>

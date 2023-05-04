@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://F9E39354-F641-4070-8B45-C337A3FDC8C9// --><tw-storydata name="Our Place, in Our City" startnode="12" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="F9E39354-F641-4070-8B45-C337A3FDC8C9" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
+	<!-- UUID://F9E39354-F641-4070-8B45-C337A3FDC8C9// --><tw-storydata name="Our Place, in Our City" startnode="13" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="F9E39354-F641-4070-8B45-C337A3FDC8C9" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
 
 @import url("styles/generics.css");
 @import url("styles/styles.css");</style><script role="script" id="twine-user-script" type="text/twine-javascript">$('#ui-bar').remove();
@@ -122,7 +122,7 @@ iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyB7uJuBjDcK-tb0aJpTjaKA1ZNLWhEPN5M&center=${originLat},${originLong}&zoom=17&origin=${originPlaceId}&destination=${destination}&mode=walking`)
 iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyB7uJuBjDcK-tb0aJpTjaKA1ZNLWhEPN5M&center=${originLat},${originLong}&zoom=17&origin=${originName}&destination=${destination}${waypointsString}&mode=walking`)
 const mount = document.getElementById("mapMount")
-console.log(iFrame)
+// console.log(iFrame)
 return iFrame
 // this.mapMount.appendChild(iFrame)
 }
@@ -135,7 +135,7 @@ iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("allowfullscreen")
 iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyCSbMwR1cUMfnIAh0Pxi0F1N16kvDGZXGU&center=${origin[0]},${origin[1]}&zoom=18&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&waypoints=${wayp}&mode=walking`)
 const mount = document.getElementById("mapMount")
-console.log(iFrame)
+// console.log(iFrame)
 return iFrame
 // this.mapMount.appendChild(iFrame)
 }
@@ -154,7 +154,7 @@ iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("allowfullscreen")
 iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/place?key=AIzaSyB7uJuBjDcK-tb0aJpTjaKA1ZNLWhEPN5M&center=${originLat},${originLong}&q=${originName}&zoom=17`)
 const mount = document.getElementById("mapMount")
-console.log(iFrame)
+// console.log(iFrame)
 return iFrame
 // this.mapMount.appendChild(iFrame)
 }
@@ -300,6 +300,7 @@ setup.backThirty = () => {
 &lt;&lt;cacheaudio &quot;49&quot; &quot;assets/audio/49.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;50.5&quot; &quot;assets/audio/50.5v2.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;50&quot; &quot;assets/audio/50.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;PD10V2&quot; &quot;assets/audio/PD10V2.mp3&quot;&gt;&gt;
 &lt;&lt;waitforaudio&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="header" tags="nobr" position="100,225" size="100,100">&lt;header class=&quot;standard&quot;&gt;
 &lt;div class=&quot;header-item&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;header-item&quot;&gt;
@@ -358,7 +359,19 @@ setup.backThirty = () => {
     &lt;/div&gt;
     &lt;/div&gt;
     
-&lt;/header&gt;</tw-passagedata><tw-passagedata pid="4" name="headerstory" tags="nobr" position="475,100" size="100,100">&lt;header class=&quot;story&quot;&gt;
+&lt;/header&gt;</tw-passagedata><tw-passagedata pid="4" name="headerEm" tags="nobr" position="100,225" size="100,100">&lt;header class=&quot;ar&quot; &gt;
+ &lt;div class=&quot;nav-wrapper&quot;&gt;
+    &lt;div class=&quot;nav-item&quot;&gt;
+  &lt;h2&gt;$ARtitle&lt;/h2&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ /* &lt;div class=&quot;nav-wrapper&quot;&gt;
+    &lt;div class=&quot;nav-item&quot;&gt;
+
+    &lt;/div&gt;
+    &lt;/div&gt; */ 
+    
+&lt;/header&gt;</tw-passagedata><tw-passagedata pid="5" name="headerstory" tags="nobr" position="600,100" size="100,100">&lt;header class=&quot;story&quot;&gt;
 &lt;&lt;if $showBackwards is true&gt;&gt;
   &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
@@ -386,7 +399,7 @@ setup.backThirty = () => {
   &lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;/header&gt;</tw-passagedata><tw-passagedata pid="5" name="footer" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
+&lt;/header&gt;</tw-passagedata><tw-passagedata pid="6" name="footer" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
 &lt;&lt;if $showBackwards is true&gt;&gt;
   &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
@@ -452,7 +465,7 @@ setup.backThirty = () => {
     &lt;/div&gt;
   &lt;/div&gt;
      &lt;&lt;/if&gt;&gt;
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="6" name="footerback" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="7" name="footerback" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
   &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
         [img[Back|assets/img/back.png][$prevpass]]
@@ -462,7 +475,7 @@ setup.backThirty = () => {
  
   &lt;/div&gt;
   
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="7" name="footerfor" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="8" name="footerfor" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
 &lt;div&gt;&lt;/div&gt;
   &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
@@ -471,7 +484,7 @@ setup.backThirty = () => {
   &lt;/div&gt;
 
   
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="8" name="footerAR" tags="nobr" position="100,375" size="100,100">&lt;footer class=&quot;ar&quot;&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="9" name="footerAR" tags="nobr" position="100,375" size="100,100">&lt;footer class=&quot;ar&quot;&gt;
  &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
         [img[Back|assets/img/back.png][$prevpass]]
@@ -523,7 +536,7 @@ setup.backThirty = () => {
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/footer&gt;
-&lt;&lt;done&gt;&gt;&lt;&lt;addclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="footerstory" tags="nobr" position="1100,100" size="100,100">&lt;footer&gt;
+&lt;&lt;done&gt;&gt;&lt;&lt;addclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="footerstory" tags="nobr" position="1225,100" size="100,100">&lt;footer&gt;
 
 /* &lt;&lt;if $showCaptionsIcon is true&gt;&gt;
 &lt;div class=&quot;nav-wrapper&quot;&gt;
@@ -598,7 +611,7 @@ setup.backThirty = () => {
 
 
 
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="10" name="footerstorywalk" tags="nobr" position="1225,100" size="100,100">&lt;footer&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="11" name="footerstorywalk" tags="nobr" position="100,225" size="100,100">&lt;footer&gt;
 
 
 
@@ -653,7 +666,7 @@ setup.backThirty = () => {
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="11" name="footerMap" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="12" name="footerMap" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
   &lt;div class=&quot;nav-wrapper&quot;&gt;
 
     &lt;div class=&quot;nav-item&quot;&gt;
@@ -673,7 +686,7 @@ setup.backThirty = () => {
         &lt;&lt;button &quot;I&#39;ve arrived&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="12" name="beginning" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;beginning&quot;&gt;&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="13" name="beginning" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;beginning&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;beginning&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;landing&quot;&gt;&gt;
 &lt;&lt;set $transcript to false&gt;&gt;
@@ -695,7 +708,7 @@ setup.backThirty = () => {
      &lt;&lt;button &quot;I&#39;m joining the audio tour here&quot;&gt;&gt;&lt;&lt;goto &quot;framing&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
            &lt;&lt;button &quot;Leave&quot;&gt;&gt;&lt;&lt;goto &quot;leave&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
-&lt;/main&gt;</tw-passagedata><tw-passagedata pid="13" name="leave" tags="nobr" position="350,225" size="100,100">&lt;&lt;set $prevpass to &quot;beginning&quot;&gt;&gt;
+&lt;/main&gt;</tw-passagedata><tw-passagedata pid="14" name="leave" tags="nobr" position="475,225" size="100,100">&lt;&lt;set $prevpass to &quot;beginning&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;leave&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;leave&quot;&gt;&gt;
 &lt;&lt;set $transcript to false&gt;&gt;
@@ -720,7 +733,7 @@ setup.backThirty = () => {
 &lt;a href=&quot;https://www.withfireandrage.com&quot;  rel=&quot;noreferrer&quot; style=&quot;color:var(--color-yellow) &quot;&gt;&lt;p&gt;withfireandrage.com&lt;/p&gt;&lt;/a&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="framing" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;beginning&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="framing" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;beginning&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;framing&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;instructions&quot;&gt;&gt;
 &lt;&lt;set $transcript to false&gt;&gt;
@@ -758,7 +771,7 @@ setup.backThirty = () => {
 &lt;&lt;/append&gt;&gt;&lt;&lt;/timed&gt;&gt;
  
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="instructions" tags="nobr" position="600,225" size="100,100">&lt;&lt;set $prevpass to &quot;beginning&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="instructions" tags="nobr" position="725,225" size="100,100">&lt;&lt;set $prevpass to &quot;beginning&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instructions&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;instructions2&quot;&gt;&gt;
 &lt;&lt;set $showMap to false&gt;&gt;
@@ -813,7 +826,7 @@ setup.backThirty = () => {
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="instructions2" tags="nobr" position="725,225" size="100,100">&lt;&lt;set $prevpass to &quot;instructions&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="instructions2" tags="nobr" position="850,225" size="100,100">&lt;&lt;set $prevpass to &quot;instructions&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instructions2&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;instructions3&quot;&gt;&gt;
 &lt;&lt;set $showMap to false&gt;&gt;
@@ -873,7 +886,7 @@ setup.backThirty = () => {
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="instructions3" tags="nobr" position="850,225" size="100,100">&lt;&lt;set $prevpass to &quot;instructions2&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="instructions3" tags="nobr" position="975,225" size="100,100">&lt;&lt;set $prevpass to &quot;instructions2&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instructions3&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;landing&quot;&gt;&gt;
 &lt;&lt;set $showMap to false&gt;&gt;
@@ -945,7 +958,7 @@ setup.backThirty = () => {
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="landing" tags="nobr" position="975,225" size="100,100">&lt;&lt;set $title to &quot;Our Place, in Our City&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="landing" tags="nobr" position="1100,225" size="100,100">&lt;&lt;set $title to &quot;Our Place, in Our City&quot;&gt;&gt;
 &lt;&lt;set $location to &quot;Lovelocks Café&quot;&gt;&gt;
 &lt;&lt;set $openOrClosed to &quot;closed&quot;&gt;&gt;
 &lt;&lt;set $prevpass to &quot;beginning&quot;&gt;&gt;
@@ -971,7 +984,7 @@ setup.backThirty = () => {
 &lt;p&gt;Is the cafe  &lt;div class=&quot;inline-btn-wrapper&quot;&gt;&lt;&lt;link &quot;open&quot;&gt;&gt;&lt;&lt;set $openOrClosed to &quot;open&quot;&gt;&gt;&lt;&lt;goto &quot;instnar2&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or &lt;div class=&quot;inline-btn-wrapper&quot;&gt;&lt;&lt;link &quot;closed&quot;&gt;&gt;&lt;&lt;set $openOrClosed to &quot;closed&quot;&gt;&gt;&lt;&lt;goto &quot;instnar2&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;&lt;/div&gt;?&lt;/p&gt;
  
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="instnar2" tags="nobr" position="1100,225" size="100,100">&lt;&lt;set $prevpass to &quot;landing&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="instnar2" tags="nobr" position="1225,225" size="100,100">&lt;&lt;set $prevpass to &quot;landing&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instnar2&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;place&quot;&gt;&gt;
 &lt;&lt;set $showMap to false&gt;&gt;
@@ -1006,7 +1019,7 @@ setup.backThirty = () => {
     &lt;&lt;button &quot;I&#39;m ready&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="place" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;instnar2&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="place" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;instnar2&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;place&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;instnar3&quot;&gt;&gt;
 &lt;&lt;set $transcript to false&gt;&gt;
@@ -1054,7 +1067,7 @@ setup.backThirty = () => {
 
 &lt;/main&gt;
 
-&lt;&lt;include &quot;footerstory&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="placetranscript" tags="" position="100,350" size="100,100">&lt;h2&gt;OUR PLACE, IN OUR CITY&lt;/h2&gt;
+&lt;&lt;include &quot;footerstory&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="placetranscript" tags="" position="225,350" size="100,100">&lt;h2&gt;OUR PLACE, IN OUR CITY&lt;/h2&gt;
 
 NARRATION BY VERONIKA SKLIAROVA:
 
@@ -1120,7 +1133,7 @@ It&#39;s important to continue to choose human rights every time.
 
 This is why we continue to organise our events. To make sure we have our place in our own city, to speak aloud.
 
-Because we are fighting not only against the Russian army but we are fighting for our values.</tw-passagedata><tw-passagedata pid="22" name="instnar3" tags="nobr" position="225,350" size="100,100">&lt;&lt;set $prevpass to &quot;place&quot;&gt;&gt;
+Because we are fighting not only against the Russian army but we are fighting for our values.</tw-passagedata><tw-passagedata pid="23" name="instnar3" tags="nobr" position="350,350" size="100,100">&lt;&lt;set $prevpass to &quot;place&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instnar3&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;AR1&quot;&gt;&gt;
 &lt;&lt;set $showMap to true&gt;&gt;
@@ -1144,9 +1157,9 @@ Because we are fighting not only against the Russian army but we are fighting fo
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="AR1" tags="nobr" position="450,50" size="100,100">&lt;&lt;set $prevpass to &quot;instnar3&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="AR1" tags="nobr" position="450,50" size="100,100">&lt;&lt;set $prevpass to &quot;instnar3&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;AR1&quot;&gt;&gt;
-&lt;&lt;set $nextpass to &quot;instnar5&quot;&gt;&gt;
+&lt;&lt;set $nextpass to &quot;embroid1&quot;&gt;&gt;
 &lt;&lt;set $showMap to false&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
 &lt;&lt;set $showReplay to true&gt;&gt;
@@ -1178,12 +1191,78 @@ Because we are fighting not only against the Russian army but we are fighting fo
 &lt;&lt;include &quot;footerAR&quot;&gt;&gt;
 &lt;&lt;done&gt;&gt;
 &lt;&lt;removeclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;
-&lt;&lt;set $s to setup.startup(true)&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="ARtranscript" tags="" position="475,350" size="100,100">&lt;br&gt;
+&lt;&lt;set $s to setup.startup(true)&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="ARtranscript" tags="" position="600,350" size="100,100">&lt;br&gt;
 &lt;br&gt;
 &lt;br&gt;
 Anna Sharyhina and her partner create a performance intervention, highlighting the rights of women including those who are lesbian and bisexual. 
 
-Walking the streets of Kharkiv, which have been heavily bombed, they carried two flags, one for Ukraine and the other the Lesbian flag for Kharkiv pride.</tw-passagedata><tw-passagedata pid="25" name="instnar5" tags="nobr" position="600,350" size="100,100">&lt;&lt;set $prevpass to &quot;instnar3&quot;&gt;&gt;
+Walking the streets of Kharkiv, which have been heavily bombed, they carried two flags, one for Ukraine and the other the Lesbian flag for Kharkiv pride.</tw-passagedata><tw-passagedata pid="26" name="embroid1" tags="nobr" position="725,350" size="100,100">&lt;&lt;set $prevpass to &quot;instnar3&quot;&gt;&gt;
+&lt;&lt;set $passage to &quot;embroid1&quot;&gt;&gt;
+&lt;&lt;set $nextpass to &quot;embroid2&quot;&gt;&gt;
+&lt;&lt;set $showMap to false&gt;&gt;
+&lt;&lt;set $showAudio to false&gt;&gt;
+&lt;&lt;set $showReplay to true&gt;&gt;
+&lt;&lt;set $showBackwards to true&gt;&gt;
+&lt;&lt;set $showForwards to true&gt;&gt;
+&lt;&lt;set $showCaptionsIcon to false&gt;&gt;
+
+&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;PD10V2&quot; play&gt;&gt;
+&lt;div id=&quot;audio&quot;&gt;&lt;/div&gt;
+
+&lt;main class=&quot;instructions&quot;&gt;
+
+&lt;p&gt;Can you spot the black and white embroidered art?&lt;/p&gt;
+
+&lt;p&gt;It’s hanging up inside Lovelooks cafe&lt;/p&gt;
+
+
+ &lt;div class=&quot;caution&quot; &gt;&lt;img src=&quot;assets/img/caution.png&quot;&gt;&lt;p&gt;It’s in the window by our artwork&lt;/p&gt;&lt;/div&gt;
+&lt;br/&gt;
+  &lt;&lt;button &quot;Yes&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;/main&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="embroid2" tags="nobr" position="450,50" size="100,100">&lt;&lt;set $prevpass to &quot;embroid1&quot;&gt;&gt;
+&lt;&lt;set $passage to &quot;embroid2&quot;&gt;&gt;
+&lt;&lt;set $nextpass to &quot;instnar5&quot;&gt;&gt;
+&lt;&lt;set $showMap to false&gt;&gt;
+&lt;&lt;set $showAudio to false&gt;&gt;
+&lt;&lt;set $showReplay to true&gt;&gt;
+&lt;&lt;set $showBackwards to true&gt;&gt;
+&lt;&lt;set $showForwards to true&gt;&gt;
+&lt;&lt;set $showCaptionsIcon to false&gt;&gt;
+&lt;&lt;set $ARtitle to &quot;Writer Lesya Ukainka&quot;&gt;&gt;
+&lt;&lt;set $transcriptname to  &quot;Emtranscript&quot;&gt;&gt;
+&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
+
+&lt;&lt;include &quot;headerEm&quot;&gt;&gt;
+&lt;audio id=&quot;audio&quot; autoplay&gt;
+  &lt;source src=&quot;https://withfireandrageliverpool.com/audio/PC/PD9V1.mp3&quot;&gt;
+
+&lt;/audio&gt;
+&lt;main class=&quot;ar&quot;&gt;
+
+ &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot;&gt;
+  
+      &lt;img src=&quot;assets/img/Ukainka.jpeg&quot; class=&quot;&quot;&gt;
+
+  &lt;/div&gt;
+  &lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
+&lt;/main&gt;
+
+&lt;&lt;include &quot;footerAR&quot;&gt;&gt;
+&lt;&lt;done&gt;&gt;
+&lt;&lt;addclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;
+&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Emtranscript" tags="" position="975,350" size="100,100">&lt;br&gt;
+Lesya Ukainka was a poet, playwright, and activist
+
+Born at the end of the 19th century, she was one of the first people to claim her identity as a Ukrainian 
+
+Ukainka spoke eight languages, and adapted the plots of ancient stories, to the context of Ukraine being colonised by Russia. Shaping the narratives through the perspective of women.
+
+After she died, she was promoted by Russians, whilst her family were arrested and taken to the gulag.
+
+In one of her poems, she writes: 
+
+“My only weapon is the word”</tw-passagedata><tw-passagedata pid="29" name="instnar5" tags="nobr" position="1100,350" size="100,100">&lt;&lt;set $prevpass to &quot;embroid2&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instnar5&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;streets3&quot;&gt;&gt;
 &lt;&lt;set $showMap to true&gt;&gt;
@@ -1203,7 +1282,7 @@ Walking the streets of Kharkiv, which have been heavily bombed, they carried two
 
   &lt;&lt;button &quot;Let&#39;s go&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="streets3" tags="nobr" position="725,350" size="100,100">&lt;&lt;set $prevpass to &quot;instnar5&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="streets3" tags="nobr" position="1225,350" size="100,100">&lt;&lt;set $prevpass to &quot;instnar5&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;streets3&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;end&quot;&gt;&gt;
 &lt;&lt;set $showMap to true&gt;&gt;
@@ -1277,7 +1356,7 @@ Walking the streets of Kharkiv, which have been heavily bombed, they carried two
 
 &lt;/main&gt;
 
-&lt;&lt;include &quot;footerstorywalk&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="streets3transcript" tags="" position="850,350" size="100,100">&lt;h2&gt;THE STREETS PART THREE&lt;/h2&gt;
+&lt;&lt;include &quot;footerstorywalk&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="streets3transcript" tags="" position="100,475" size="100,100">&lt;h2&gt;THE STREETS PART THREE&lt;/h2&gt;
 
 NARRATION BY VERONIKA SKLIAROVA:
 
